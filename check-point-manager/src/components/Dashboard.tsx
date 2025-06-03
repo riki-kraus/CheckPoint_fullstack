@@ -153,7 +153,7 @@ return (
               <div className="header-cell header-id">ID</div>
               <div className="header-cell header-name">Name</div>
               <div className="header-cell header-class">Class</div>
-[]              <div className="header-cell header-email">Email</div>
+          <div className="header-cell header-email">Email</div>
           </div>
 
           <AnimatePresence>
@@ -185,7 +185,7 @@ return (
                                   <div className="student-cell student-id">{student.id}</div>
                                   <div className="student-cell">{student.firstName} {student.lastName}</div>
                                   <div className="student-cell student-class">{student.class}</div>
-[]                                  <div className="student-cell student-email">{student.email}</div>
+                                <div className="student-cell student-email">{student.email}</div>
                                   <div className="student-cell student-actions" onClick={(e) => e.stopPropagation()}>
                                       <motion.button className="action-icon-button edit-scores"
                                         onClick={() => {

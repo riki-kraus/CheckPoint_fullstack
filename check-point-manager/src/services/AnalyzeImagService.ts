@@ -23,4 +23,3 @@ const AnalyzeImageService = () => {
 export default AnalyzeImageService;
 
 
-

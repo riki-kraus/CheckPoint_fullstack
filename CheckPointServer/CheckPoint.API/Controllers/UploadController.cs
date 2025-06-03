@@ -65,7 +65,7 @@ public class UploadController : ControllerBase
         };
 
         // ACL: מאפשר שליטה מלאה בבקשה
-        request.Headers["x-amz-acl"] = "bucket-owner-full-control";
+      // request.Headers["x-amz-acl"] = "bucket-owner-full-control";
 
         try
         {
@@ -82,12 +82,7 @@ public class UploadController : ControllerBase
 
     public async Task<IActionResult> GetDownloadPresignedUrl(string Url)
     {
-        //if (string.IsNullOrEmpty(fileName))
-        //    return BadRequest("שם הקובץ נדרש");
 
-        //var key = IsStudentTest
-        //    ? $"exams/Students/{subject}-{date}/{@class}/{fileName}"
-        //    : $"exams/Results/{subject}/{fileName}";
         Console.WriteLine(Url);
         var decodedUrl = Uri.UnescapeDataString(Url);
         Console.WriteLine(decodedUrl);

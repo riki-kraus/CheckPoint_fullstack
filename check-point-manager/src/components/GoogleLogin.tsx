@@ -1,8 +1,8 @@
+
 import { useEffect } from "react";
-import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-// הכרה ב־window.google
+import axiosInstance from "../utils/axiosInstance";
 declare global {
   interface Window {
     google: any;
@@ -27,10 +27,9 @@ const GoogleLogin = ({ onSuccessLogin }: GoogleLoginProps) => {
       const profile:Profile={email:decodedGoogle.email,name:decodedGoogle.name,picture:decodedGoogle.picture}
       console.log(profile)
       localStorage.setItem("profile", JSON.stringify(profile));
-      const url=import.meta.env.BASE_URL
       try {
-        const res = await axios.post(
-          `${url}/auth/google-login`,
+        const res = await axiosInstance.post(
+          `/auth/google-login`,
           { idToken: token },
           {
             headers: { "Content-Type": "application/json" },
@@ -59,7 +58,7 @@ const GoogleLogin = ({ onSuccessLogin }: GoogleLoginProps) => {
     const initializeGoogle = () => {
       if (window.google && window.google.accounts) {
         window.google.accounts.id.initialize({
-          client_id:import.meta.env.VITE_GOOGLE_CLIENT_ID,
+          client_id: import.meta.env.VITE_CLIENT_ID,
           callback: handleCredentialResponse,
         });
 

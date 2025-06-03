@@ -155,7 +155,7 @@ export const uploadAllWordFiles = async ({
         headers: {
           "Content-Type":
             "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-          "x-amz-acl": "bucket-owner-full-control",
+          // "x-amz-acl": "bucket-owner-full-control",
         },
       });
 

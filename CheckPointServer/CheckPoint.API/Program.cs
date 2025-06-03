@@ -39,21 +39,7 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddDependencyInjectoions();
 builder.Services.AddSwagger();
-builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
-//builder.Services.AddDbContext<DataContext>(options =>
-//{
-//    var configuration = builder.Configuration; // Use builder.Configuration directly instead of BuildServiceProvider
-//    var connectionString = configuration.GetConnectionString("CheckPointDB");
-
-//    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
-//});
-//builder.Services.AddDbContext<DataContext>(options =>
-//{
-//    var configuration = builder.Configuration;
-//    var connectionString = configuration.GetConnectionString("CheckPointDB");
-//    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
-//});
 builder.Services.AddDbContext<DataContext>(options =>
 {
     var configuration = builder.Configuration;
