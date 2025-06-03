@@ -1,5 +1,4 @@
 
-import { Outlet } from "react-router-dom";
 import { useContext, useEffect, useRef, useState } from "react";
 import { ExamService } from "../services/examService";
 import { AnswerService } from "../services/answerService";
@@ -17,7 +16,6 @@ const ResultTests = () => {
   const [processedCount, setProcessedCount] = useState<number>(0);
   const [totalCount, setTotalCount] = useState<number>(0);
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
-  const [hasProcessed, setHasProcessed] = useState(false);
   const hasProcessedRef = useRef(false);
 
   const processAllExams = async () => {
