@@ -17,7 +17,7 @@ export const AnswerService = {
     getByExamId:async(examId:number|undefined)=>
     {
         try {
-            const res = await axiosInstance.get(`'/Anawer/examId/${examId}`);
+            const res = await axiosInstance.get(`/Anawer/examId/${examId}`);
        
             console.log(res.data)
             return res.data;
@@ -29,7 +29,7 @@ export const AnswerService = {
     deleteByExamId:async(examId:number|undefined)=>
     {
         try {
-            const res = await axiosInstance.delete(`'/Anawer/examId/${examId}`)          
+            const res = await axiosInstance.delete(`/Anawer/examId/${examId}`)          
             //console.log(res.data)
             alert("התשובה נמחקה בהצלחה");
 
