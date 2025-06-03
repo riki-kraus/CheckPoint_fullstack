@@ -134,7 +134,6 @@ const StudentTests = () => {
     checkTests();
   }, [selectedImages, setExams, setStudents, setMarks, setAnswers, setFiles, files, setIsAbleNext]);
 
-  // Component for displaying unregistered student message
   const UnregisteredStudentMessage = ({ students }: { students: { firstName: string, lastName: string }[] }) => (
     <div className="error-container" style={{
       padding: "24px",
@@ -183,7 +182,6 @@ const StudentTests = () => {
       </div>
     </div>
   );
-  // Enhanced Empty State Component with a link
   const EnhancedEmptyState = () => (
     <div className="empty-state"   >
       <div className="empty-icon" >

@@ -2,13 +2,12 @@ import { Answer } from "../Types";
 import axiosInstance from "../utils/axiosInstance";
 import { handleAxiosError } from "../utils/handleAxiosError";
 
-// const API_BASE =`${config.apiUrl}/Student`;
 
 export const AnswerService = {
   
     create: async (answer: Partial<Answer>) => {
         try {
-            const res = await axiosInstance.post('/Student', answer);
+            const res = await axiosInstance.post('/Anawer', answer);
             return res.data;
         } catch (e: any) {
             handleAxiosError(e, "הוספת התשובה נכשלה");
@@ -18,7 +17,7 @@ export const AnswerService = {
     getByExamId:async(examId:number|undefined)=>
     {
         try {
-            const res = await axiosInstance.get(`/examId/${examId}`);
+            const res = await axiosInstance.get(`'/Anawer/examId/${examId}`);
        
             console.log(res.data)
             return res.data;
@@ -30,7 +29,7 @@ export const AnswerService = {
     deleteByExamId:async(examId:number|undefined)=>
     {
         try {
-            const res = await axiosInstance.delete(`/examId/${examId}`)          
+            const res = await axiosInstance.delete(`'/Anawer/examId/${examId}`)          
             //console.log(res.data)
             alert("התשובה נמחקה בהצלחה");
 
