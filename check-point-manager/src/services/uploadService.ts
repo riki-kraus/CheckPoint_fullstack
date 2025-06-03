@@ -35,6 +35,7 @@ export const uploadFileToS3 = async (
 ): Promise<{ success: boolean; fileName: string }> => {
   console.log(file)
   console.log(exam)
+
   console.log(student)
 
   const fileExtension = file?.name.split(".").pop();
@@ -45,24 +46,18 @@ export const uploadFileToS3 = async (
     throw new Error("File is required for upload.");
   }
   const params = buildParams(finalFileName, exam, student, file.type, false);
-  console.log("params")
 
-console.log(params)
   try {
-
     const response = await axiosInstance.get("/upload/presigned-url", {
       params,
     });
 
     const presignedUrl = response.data.url;
 
-    console.log(presignedUrl)
-
     await axiosInstance.put(presignedUrl, file, {
       headers: {
         "Content-Type": file.type,
-        // "x-amz-acl": "bucket-owner-full-control",
-      },
+  },
       onUploadProgress: (event) => {
         const percent = Math.round((event.loaded * 100) / (event.total || 1));
         if (onProgress) {
