@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -89,19 +89,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\User\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json",
               "ToolTip": "C:\\Users\\User\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json",
               "RelativeToolTip": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-03T03:35:59.65Z"
+              "WhenOpened": "2025-06-03T03:35:59.65Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -117,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UploadController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\UploadController.cs",
               "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\UploadController.cs",
@@ -125,8 +126,7 @@
               "RelativeToolTip": "CheckPoint.API\\Controllers\\UploadController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T02:39:10.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T02:39:10.884Z"
             },
             {
               "$type": "Document",
@@ -202,13 +202,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Program.cs",
               "RelativeDocumentMoniker": "CheckPoint.API\\Program.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Program.cs",
               "RelativeToolTip": "CheckPoint.API\\Program.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAqwGwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T20:34:54.161Z",
               "EditorCaption": ""
