@@ -12,9 +12,6 @@ export const myRouter = createBrowserRouter([
 
         path: '/',
         element: <AppLayout />,
-        // element: <HomePage></HomePage>,
-        // element: <StudentTable />,
-        // element: <StudentTableV02></StudentTableV02>,
         children: [
             {
                 index: true,
@@ -22,18 +19,9 @@ export const myRouter = createBrowserRouter([
             },
             {
                 path: 'dashboard',
-                element: <Dashboard                    />,
-              //    children:[{
-              //     path: ':id',
-              //     // element: <StudentScoresModal />
-              //     element: null, // נשתמש בפרמטר הזה בתוך Dashboard כדי לפתוח מודאל
+                element: <Dashboard/>,
 
-              // }  ],
             },
-            // {
-            //     path: 'tests',
-            //     element: <StudentTableV02></StudentTableV02>,
-            // },
             {
                 path: 'statistics',
                 element: <StatisticsDashboard/>
@@ -43,49 +31,41 @@ export const myRouter = createBrowserRouter([
             {path:'tests',element: <Upload />,
               children: [
                 {
-                  index: true, // עבור /upload
+                  index: true, 
                   element: <UploadMenu />
                 },
                 {
                   path: "test-results",
                   element: (
-                    // <StepperProvider>
                       <Stepper_upload srcComponent={"test-result"} />
-                    // </StepperProvider>
                   ),
                 },
                 {
                   path: "students-test",
                   element: (
-                    // <StepperProvider>
                       <Stepper_upload srcComponent={"students-test"} />
-                    // </StepperProvider>
                   ),
                 },
               ],
             } ,       
                 {
                   path: "GetStarted",
-                  element: <Upload />, // רק Outlet
+                  element: <Upload />, 
                   children: [
                     {
-                      index: true, // עבור /upload
+                      index: true, 
                       element: <UploadMenu />
                     },
                     {
                       path: "test-results",
                       element: (
-                        // <StepperProvider>
                           <Stepper_upload srcComponent={"test-result"} />
-                        // </StepperProvider>
                       ),
                     },
                     {
                       path: "students-test",
                       element: (
-                        // <StepperProvider>
                           <Stepper_upload srcComponent={"students-test"} />
-                        // </StepperProvider>
                       ),
                     },
                   ],

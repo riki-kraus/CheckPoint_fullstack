@@ -21,11 +21,8 @@ const UploadTest = () => {
           const updated = prev.map((f, i) =>
             i === fileIndex && f ? { ...f, progress: 100, uploading: false } : f
           );
-  
-          // אם כולם סיימו – אפשר להמשיך
           const allDone = updated.every((f) => f && f.progress === 100);
           setIsAbleNext(allDone);
-  
           return updated;
         });
   
@@ -38,7 +35,7 @@ const UploadTest = () => {
       }
     }, 200);
   };
-  
+
   const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
     const filesArray = Array.from(e.target.files || []);
     await processNewFiles(filesArray);
@@ -118,8 +115,7 @@ const UploadTest = () => {
         <div className="upload-content">
           <div className={`upload-icon ${isDragOver ? "icon-drag-over" : ""}`}>
             <svg
-              // width="32"
-              // height="32"
+
                  width="20"
               height="20"
               viewBox="0 0 24 24"

@@ -8,6 +8,7 @@ import {
   ImageRun,
 } from "docx";
 import { Exam, Student } from "../Types";
+import axiosInstance from "./axiosInstance";
 
 // פונקציית עזר
 const createTextRun = (text: string, options?: Partial<{ bold: boolean }>) =>
@@ -134,15 +135,12 @@ export const uploadAllWordFiles = async ({
         signature
       );
 
-      const response = await axios.get(
-        "https://localhost:50397/api/upload/presigned-url",
+      const response = await axiosInstance.get("/upload/presigned-url",
         {
           params: {
             fileName,
             type: "student",
-            // subjectName: "feedback",
             subjectName: exam.subject,
-
             studentName: `${student.firstName} ${student.lastName}`,
             className: student.class ?? "ללא כיתה",
             contentType:

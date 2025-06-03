@@ -1,28 +1,11 @@
-import axios from "axios";
-
-// ה־API שלך מחכה ל־GET עם פרמטרים firstName, lastName, className
-const API_BASE = `https://localhost:50397/api/Students`;
-
-// פונקציה גלובלית לניהול שגיאות בצורה מסודרת
-const handleAxiosError = (e: any, defaultMessage: string) => {
-    if (axios.isAxiosError(e)) {
-        if (e.response) {
-            const errorMessage = e.response.data || "שגיאה מהשרת";
-            alert(`${defaultMessage}: ${errorMessage}`);
-        } else {
-            alert(`${defaultMessage}: לא הייתה תגובה מהשרת`);
-        }
-    } else {
-        alert(`${defaultMessage}: שגיאה לא ידועה`);
-    }
-    console.error(defaultMessage, e);
-};
+import { handleAxiosError } from "../utils/handleAxiosError";
+import axiosInstance from "../utils/axiosInstance";
 
 export const StudentSheetService = {
 
     getStudentEmail: async (firstName: string, lastName: string, className: string) => {
         try {
-            const res = await axios.get(`${API_BASE}/email`, {
+            const res = await axiosInstance.get(`/Students/email`, {
                 params: {
                     firstName,
                     lastName,

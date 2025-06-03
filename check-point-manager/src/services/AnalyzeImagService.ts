@@ -1,14 +1,13 @@
 // import axios from 'axios';
 // import { number } from 'yup';
 
-import axios from "axios";
+import axiosInstance from "../utils/axiosInstance";
 
 
-const API_BASE = `https://localhost:50397/api`;
 
 export const analyzeImage = async (base64Image: string) => {
   try {
-    const response = await axios.post(`${API_BASE}/Ocr/analyze-image`, { base64Image: base64Image });
+    const response = await axiosInstance.post(`/Ocr/analyze-image`, { base64Image: base64Image });
     console.log(response.data);
     return response.data.responses[0]?.textAnnotations.slice(1) || null;
   } catch (error: any) {
@@ -23,5 +22,5 @@ const AnalyzeImageService = () => {
 
 export default AnalyzeImageService;
 
-// };
+
 

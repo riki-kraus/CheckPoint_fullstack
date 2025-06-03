@@ -1,15 +1,13 @@
-import axios from "axios";
 import { Submission } from "../Types";
+import { handleAxiosError } from "../utils/handleAxiosError";
+import axiosInstance from "../utils/axiosInstance";
 
-// const API_BASE = `${config.apiUrl}/Submission`;
-const API_BASE=`https://localhost:50397/api/Submission`;
-//https://localhost:50397/api/Submission
 
 export const SubmissionService = {
  
     getByStudentId: async (StudentId: number) => {
         try {
-            const res = await axios.get(`${API_BASE}/StudentId/${StudentId}`);
+            const res = await axiosInstance.get(`/Submission/StudentId/${StudentId}`);
             console.log(res.data);
             return res.data;
         } catch (e: any) {
@@ -22,7 +20,7 @@ export const SubmissionService = {
     create: async (submission: Partial<Submission>) => {
         console.log(submission)
         try {
-            const res = await axios.post(API_BASE, {StudentId:submission.studentId,ExamId:submission
+            const res = await axiosInstance.post('/Submission', {StudentId:submission.studentId,ExamId:submission
                 .examId,File_Url:submission.fileUrl,File_Url_FeedBack:submission.fileUrlFeedback,Score:submission.score});
             console.log("המשתמש נוסף בהצלחה", res.data);
             return res.data;
@@ -35,10 +33,8 @@ export const SubmissionService = {
         console.log(examId)
 
         try {
-             const res = await axios.get(`${API_BASE}/examIdAndStudentId/${examId}/${studentId}`);
-            //https://localhost:50397/api/Submission/examIdAndStudentId/1196/38
-            // const res = await axios.get(`https://localhost:50397/api/Submission/examIdAndStudentId/1196/38`);
-
+             const res = await axiosInstance.get(`/Submission/examIdAndStudentId/${examId}/${studentId}`);
+        
             console.log("ההגשות נטענו בהצלחה", res.data);
             return res.data;
         } catch (e: any) {
@@ -48,19 +44,3 @@ export const SubmissionService = {
     }
     
     }
-
-
-// פונקציה גלובלית לניהול שגיאות בצורה מסודרת
-const handleAxiosError = (e: any, defaultMessage: string) => {
-    if (axios.isAxiosError(e)) {
-        if (e.response) {
-            const errorMessage = e.response.data || "שגיאה מהשרת";
-            alert(`${defaultMessage}: ${errorMessage}`);
-        } else {
-            alert(`${defaultMessage}: לא הייתה תגובה מהשרת`);
-        }
-    } else {
-        alert(`${defaultMessage}: שגיאה לא ידועה`);
-    }
-    console.error(defaultMessage, e);
-};

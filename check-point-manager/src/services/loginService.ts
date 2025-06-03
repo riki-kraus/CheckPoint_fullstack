@@ -1,5 +1,6 @@
-import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import axiosInstance from "../utils/axiosInstance";
+import axios from "axios";
 
  
 // פונקציה להתחברות
@@ -14,7 +15,7 @@ export const LoginService = {
   login: async (data: any): Promise<LoginResponse> => {
     console.log("Attempting to login with data:", data);
     try {
-      const res = await axios.post("https://localhost:50397/api/Auth", data);
+      const res = await axiosInstance.post("/Auth", data);
 
       const token = res.data.token;
       console.log("Token received:", token);
@@ -38,16 +39,3 @@ export const LoginService = {
   }
 };
 
-// // פונקציה כללית לניהול שגיאות
-// export const handleAxiosError = (e: any, defaultMessage: string) => {
-//   if (axios.isAxiosError(e) && e.response) {
-//     console.log("v")
-//     const errorMessage = e.response.data || "שגיאה מהשרת";
-//     alert(`${defaultMessage}: ${errorMessage}`);
-//   } else {
-//     console.log("v")
-
-//     alert(`${defaultMessage}: שגיאה לא ידועה`);
-//   }
-//   console.error(defaultMessage, e);
-// };

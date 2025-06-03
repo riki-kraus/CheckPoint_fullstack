@@ -1,57 +1,7 @@
-// // uploadService.ts
-// import axios from "axios";
+import axiosInstance from "../utils/axiosInstance";
 
-// // פונקציה להעלאת קובץ ל-S3 עם החזרת אחוזים
-// export const uploadFileToS3 = async (
-//   file: File,
-//   exam: any,
-//   student: any,
-//   onProgress: (percent: number) => void // מקבלים פונקציה לעדכון התקדמות
-// ) => {
-//   const fileExtension = file.name.split(".").pop();
-//   const finalFileName = `${exam?.dateExam || `file_${Math.random()}`}.${fileExtension}`;
 
-//   const params: any = {
-//     fileName: finalFileName,
-//     type: student ? "student" : "results",
-//     subjectName: exam?.subject || "",
-//     contentType: file.type, // ✅ חובה!
-//   };
 
-//   if (student) {
-//     params.studentName = `${student.FirstName} ${student.LastName}`;
-//     params.className = student.Class || "";
-//   }
-
-//   try {
-//     const response = await axios.get("https://localhost:50397/api/upload/presigned-url", {
-//       params,
-//     });
-
-//     const presignedUrl = response.data.url;
-
-//     await axios.put(presignedUrl, file, {
-//       headers: {
-//         "Content-Type": file.type,
-//         "x-amz-acl": "bucket-owner-full-control",
-//       },
-//       onUploadProgress: (event) => {
-//         const percent = Math.round((event.loaded * 100) / (event.total || 1));
-//         onProgress(percent); // עדכון אחוז ההתקדמות
-//       },
-//     });
-
-//     return true; // מחזיר שההעלאה הצליחה
-//   } catch (error) {
-//     console.error("❌ שגיאה בהעלאה:", error);
-//     throw new Error("אירעה שגיאה במהלך ההעלאה.");
-//   }
-// };
-// s3Service.ts
-
-import axios from "axios";
-
-// עוזר לבניית הפרמטרים
 const buildParams = (
   fileName: string,
   exam: any,
@@ -98,13 +48,13 @@ export const uploadFileToS3 = async (
   const params = buildParams(finalFileName, exam, student, file.type, false);
 
   try {
-    const response = await axios.get("https://localhost:50397/api/upload/presigned-url", {
+    const response = await axiosInstance.get("/upload/presigned-url", {
       params,
     });
 
     const presignedUrl = response.data.url;
 
-    await axios.put(presignedUrl, file, {
+    await axiosInstance.put(presignedUrl, file, {
       headers: {
         "Content-Type": file.type,
         "x-amz-acl": "bucket-owner-full-control",
@@ -123,11 +73,6 @@ export const uploadFileToS3 = async (
     throw new Error("אירעה שגיאה במהלך ההעלאה.");
   }
 };
-// const url=`exams/student/${student.Class}/${fullName}/${exam.subject}`
-// const fileExamUrl=`${url}/${fileExamName}`
-// const filFeedbackUrl=`${url}/${fileFeedbackName}`
-//-----------
-
 
 // 📥 הורדת קובץ מ-S3
 export const downloadFileFromS3 = async (
@@ -138,7 +83,7 @@ export const downloadFileFromS3 = async (
   const params = buildParams(fileName, exam, student, "application/octet-stream", true);
 
   try {
-    const response = await axios.get("https://localhost:50397/api/upload/presigned-url", {
+    const response = await axiosInstance.get("/upload/presigned-url", {
       params,
     });
 

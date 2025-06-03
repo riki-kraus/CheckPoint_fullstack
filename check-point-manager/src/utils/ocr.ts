@@ -2,23 +2,7 @@ import  { analyzeImage } from "../services/AnalyzeImagService";
 import { Exam, Student } from "../Types";
 
 
-// export const extractExam = (words: any[]): Exam => {
-//   const getText = (start: number, count: number) =>
-//     words.slice(start, start + count).map(w => w.description).join(" ");
 
-//   const dateIdx = words.findIndex(w => w.description === "תאריך");
-//   const subjectIdx = words.findIndex(w => w.description === "מקצוע");
-
-//   if (dateIdx === -1 || subjectIdx === -1) throw new Error("שדות חיוניים חסרים");
-
-//   const dateExam = getText(dateIdx + 2, 4).replace(/([א-ת])\s'/, "$1'"); // הוספתי כאן את dateExam
-
-//   return {
-//     dateExam, // משתמשים במשתנה פה
-//     subject: getText(subjectIdx + 2, 2),
-//     file_Url_Exam: `exams/results/${getText(subjectIdx + 2, 2)}/${dateExam}` // השתמשתי במשתנה dateExam
-//   };
-// };
 const encodeForUrl = (text: string) => {
   return encodeURIComponent(text); // ממיר כל תו לפורמט URL תקני
 };

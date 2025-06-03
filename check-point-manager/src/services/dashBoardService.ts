@@ -1,22 +1,6 @@
-import axios from "axios";
 import { Submission } from "../Types";
-
-// const API_BASE = "https://localhost:50397/api/DashBoard";
-const API_BASE = import.meta.env.VITE_API_URL;
-
-const handleAxiosError = (e: any, defaultMessage: string) => {
-  if (axios.isAxiosError(e)) {
-    if (e.response) {
-      const errorMessage = e.response.data || "שגיאה מהשרת";
-      alert(`${defaultMessage}: ${errorMessage}`);
-    } else {
-      alert(`${defaultMessage}: לא התקבלה תגובה מהשרת`);
-    }
-  } else {
-    alert(`${defaultMessage}: שגיאה לא ידועה`);
-  }
-  console.error(defaultMessage, e);
-};
+import axiosInstance from "../utils/axiosInstance";
+import { handleAxiosError } from "../utils/handleAxiosError";
 
 export const DashBoardService = {
   /**
@@ -26,7 +10,7 @@ export const DashBoardService = {
    */
   async getClassAverage(className?: string, subject?: string): Promise<number> {
     try {
-      const response = await axios.get<number>(`${API_BASE}/DashBoard/class-avg`, {
+      const response = await axiosInstance.get<number>(`/DashBoard/class-avg`, {
         params: {
           _class: className,
           sub: subject || null,
@@ -41,12 +25,11 @@ export const DashBoardService = {
   },
 
   /**
-   * מקבל את ממוצע תלמיד לפי מזהה
    * @param studentId מזהה תלמיד
    */
   async getStudentAverage(studentId: number): Promise<number> {
     try {
-      const response = await axios.get<number>(`${API_BASE}/DashBoard/${studentId}`);
+      const response = await axiosInstance.get<number>(`/DashBoard/${studentId}`);
       return response.data;
     } catch (e) {
       handleAxiosError(e, "שגיאה בשליפת ממוצע תלמיד");
@@ -60,7 +43,7 @@ export const DashBoardService = {
    */
     async getPassRate(className?: string, subject?: string): Promise<number> {
       try {
-        const response = await axios.get<number>(`${API_BASE}/DashBoard/pass-rate
+        const response = await axiosInstance.get<number>(`/DashBoard/pass-rate
 `, {
           params: {
             _class: className,
@@ -74,13 +57,12 @@ export const DashBoardService = {
       }
     },
     /**
-   * מחזיר את רשימת ההגשות לפי כיתה ומקצוע (אופציונלי)
-   * @param className שם כיתה (אופציונלי)
-   * @param subject מקצוע (אופציונלי)
+   * @param className 
+   * @param subject 
    */
     async getExamsByClassAndSubject(className?: string, subject?: string): Promise<Submission[]> {
       try {
-        const response = await axios.get<Submission[]>(`${API_BASE}/DashBoard/exams`, {
+        const response = await axiosInstance.get<Submission[]>(`/DashBoard/exams`, {
           params: {
             _class: className,
             sub: subject || null,

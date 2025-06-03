@@ -8,15 +8,6 @@ export type Student = {
     email?:string,
     class: string
 }
-// export type Student = {
-//   id?: number,
-//   userName?: string,
-//   password?:string,
-//   firstName: string,
-//   lastName: string,
-//   email?:string,
-//   class: string
-// }
 
 export type Submission = {
     // date: any;
