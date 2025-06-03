@@ -1,0 +1,358 @@
+/* Variables */
+
+.document-name {
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.document-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.document-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.view-button {
+  border-color: var(--info);
+  color: var(--info);
+}
+
+.view-button:hover {
+  background: var(--info);
+  color: var(--text-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.download-button {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.download-button:hover {
+  background: var(--success);
+  color: var(--text-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Feedback */
+.feedback-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feedback-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.feedback-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), var(--success));
+}
+
+.feedback-content {
+  line-height: 1.8;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.feedback-content p {
+  margin: 0 0 1.5rem 0;
+}
+
+.feedback-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Appeal Dialog */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.appeal-dialog {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  animation: slideInScale 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInScale {
+  from { 
+    opacity: 0; 
+    transform: scale(0.9) translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
+  }
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  border-bottom: 2px solid var(--border);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(99, 102, 241, 0.05) 100%);
+}
+
+.dialog-header h3 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.close-button:hover {
+  background: var(--error);
+  color: var(--text-white);
+  transform: rotate(90deg);
+}
+
+.dialog-content {
+  padding: 2.5rem;
+}
+
+.dialog-description {
+  margin: 0 0 2rem 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.appeal-textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  resize: vertical;
+  transition: var(--transition);
+}
+
+.appeal-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  background: var(--bg-card);
+}
+
+.appeal-textarea::placeholder {
+  color: var(--text-light);
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 2rem 2.5rem;
+  border-top: 2px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.cancel-button {
+  padding: 1rem 2rem;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.cancel-button:hover {
+  background: var(--text-secondary);
+  color: var(--text-white);
+  border-color: var(--text-secondary);
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-grid,
+  .documents-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .exam-results-container {
+    padding: 1rem;
+  }
+  
+  .header-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .grade-display {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  
+  .exam-title {
+    font-size: 2rem;
+  }
+  
+  .tab-navigation {
+    padding: 0.25rem;
+  }
+  
+  .tab-button {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .document-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .document-actions {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .dialog-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .exam-results-container {
+    padding: 0.5rem;
+  }
+  
+  .card,
+  .document-section,
+  .feedback-card {
+    padding: 1rem;
+  }
+  
+  .appeal-dialog {
+    margin: 0.5rem;
+    border-radius: var(--radius);
+  }
+  
+  .dialog-header,
+  .dialog-content,
+  .dialog-actions {
+    padding: 1.5rem;
+  }
+}

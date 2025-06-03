@@ -1,0 +1,225 @@
+<div class="exam-results-container" [@slideInUp]>
+
+  <div class="header-section">
+    <button class="back-button" [@fadeInScale]>
+      <span class="icon-back">←</span>
+      Back to Exams
+    </button>
+    
+    <div class="exam-header">
+      <h1 class="exam-title">{{ examInfo().title }}</h1>
+      <p class="exam-meta">{{ examInfo().date }} • {{ examInfo().instructor }}</p>
+    </div>
+    
+    <div class="header-actions">
+      <div class="grade-display" [class]="gradeClass()" [@scoreAnimation]>
+        {{ examInfo().totalScore }}%
+      </div>
+      <button 
+        class="appeal-button"
+        [@buttonHover]="buttonState()"
+        (mouseenter)="onButtonHover('hover')"
+        (mouseleave)="onButtonHover('idle')"
+        (click)="openAppealDialog()">
+        <span class="icon-warning">⚠</span>
+        Submit Appeal
+      </button>
+    </div>
+  </div>
+
+  <nav class="tab-navigation" [@fadeInScale]>
+    <button 
+      class="tab-button"
+      [class.active]="activeTab() === 'overview'"
+      (click)="setActiveTab('overview')">
+      Overview
+    </button>
+    <button 
+      class="tab-button"
+      [class.active]="activeTab() === 'feedback'"
+      (click)="setActiveTab('feedback')">
+      Feedback
+    </button>
+    <button 
+      class="tab-button"
+      [class.active]="activeTab() === 'documents'"
+      (click)="setActiveTab('documents')">
+      Documents
+    </button>
+  </nav>
+
+  @if (activeTab() === 'overview') {
+    <div class="tab-content" [@staggerCards]>
+      <div class="content-grid">
+        <div class="card grade-breakdown-card">
+          <div class="card-header">
+            <h3>Grade Breakdown</h3>
+            <p class="card-subtitle">Section by section scoring</p>
+          </div>
+          <div class="card-content">
+            @for (section of sections(); track section.name) {
+              <div class="section-item">
+                <div class="section-info">
+                  <span class="section-name">{{ section.name }}</span>
+                  <span class="section-score">{{ section.score }}/{{ section.maxScore }}</span>
+                </div>
+                <div class="progress-container">
+                  <div 
+                    class="progress-bar" 
+                    [@progressBar]="{ value: '', params: { width: section.percentage } }"
+                    [style.width.%]="section.percentage">
+                  </div>
+                </div>
+              </div>
+            }
+            <div class="total-score">
+              <div class="section-info total">
+                <span class="section-name">Total Score</span>
+                <span class="section-score">{{ examInfo().totalScore }}/{{ examInfo().maxScore }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card performance-card">
+          <div class="card-header">
+            <h3>Performance Analysis</h3>
+            <p class="card-subtitle">Your strengths and areas for improvement</p>
+          </div>
+          <div class="card-content">
+            <div class="performance-section">
+              <h4 class="performance-title">STRENGTHS</h4>
+              <div class="performance-tags">
+                @for (strength of strengths(); track strength.name) {
+                  <span class="performance-tag strength-tag">{{ strength.name }}</span>
+                }
+              </div>
+            </div>
+            
+            <div class="performance-section">
+              <h4 class="performance-title">AREAS FOR IMPROVEMENT</h4>
+              <div class="performance-tags">
+                @for (improvement of improvements(); track improvement.name) {
+                  <span class="performance-tag improvement-tag">{{ improvement.name }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+
+  @if (activeTab() === 'documents') {
+    <div class="tab-content" [@staggerCards]>
+      <div class="documents-grid">
+        <div class="document-section">
+          <div class="section-header">
+            <h3>Feedback Document</h3>
+            <p class="section-subtitle">Detailed written feedback</p>
+          </div>
+          
+          @for (doc of documents(); track doc.name) {
+            @if (doc.name.includes('Feedback')) {
+              <div class="document-card">
+                <div class="document-icon">{{ doc.icon }}</div>
+                <div class="document-info">
+                  <h4 class="document-name">{{ doc.name }}</h4>
+                  <p class="document-meta">{{ doc.type }} • {{ doc.size }}</p>
+                </div>
+                <div class="document-actions">
+                  <button class="action-button view-button" (click)="viewDocument(doc)">
+                    <span class="icon-view">👁</span>
+                    View
+                  </button>
+                  <button class="action-button download-button" (click)="downloadDocument(doc)">
+                    <span class="icon-download">↓</span>
+                    Download
+                  </button>
+                </div>
+              </div>
+            }
+          }
+        </div>
+
+        <div class="document-section">
+          <div class="section-header">
+            <h3>Scanned Exam</h3>
+            <p class="section-subtitle">Your graded exam paper</p>
+          </div>
+          
+          @for (doc of documents(); track doc.name) {
+            @if (doc.name.includes('Graded')) {
+              <div class="document-card">
+                <div class="document-icon">{{ doc.icon }}</div>
+                <div class="document-info">
+                  <h4 class="document-name">{{ doc.name }}</h4>
+                  <p class="document-meta">{{ doc.type }} • {{ doc.size }}</p>
+                </div>
+                <div class="document-actions">
+                  <button class="action-button view-button" (click)="viewDocument(doc)">
+                    <span class="icon-view">👁</span>
+                    View
+                  </button>
+                  <button class="action-button download-button" (click)="downloadDocument(doc)">
+                    <span class="icon-download">↓</span>
+                    Download
+                  </button>
+                </div>
+              </div>
+            }
+          }
+        </div>
+      </div>
+    </div>
+  }
+
+  @if (activeTab() === 'feedback') {
+    <div class="tab-content" [@slideInUp]>
+      <div class="feedback-container">
+        <div class="feedback-card">
+          <div class="card-header">
+            <h3>Instructor Feedback</h3>
+            <p class="card-subtitle">Personalized comments on your performance</p>
+          </div>
+          <div class="card-content">
+            <div class="feedback-content">
+              <p>Excellent work on the calculus problems! Your understanding of derivatives and integrals is clearly demonstrated. However, focus more on application problems and series convergence for future exams. Overall, this represents strong mastery of the fundamental concepts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@if (showAppealDialog()) {
+  <div class="overlay" [@fadeInScale] (click)="closeAppealDialog()">
+    <div class="appeal-dialog" (click)="$event.stopPropagation()">
+      <div class="dialog-header">
+        <h3>Submit Grade Appeal</h3>
+        <button class="close-button" (click)="closeAppealDialog()">×</button>
+      </div>
+      <div class="dialog-content">
+        <p class="dialog-description">
+          Explain why you believe your grade should be reconsidered. Be specific about which questions or sections you are appealing.
+        </p>
+        <textarea 
+          class="appeal-textarea"
+          placeholder="Describe your appeal reason here..."
+          [(ngModel)]="appealText">
+        </textarea>
+      </div>
+      <div class="dialog-actions">
+        <button class="cancel-button" (click)="closeAppealDialog()">Cancel</button>
+        <button 
+          class="submit-button" 
+          [disabled]="!appealText().trim()"
+          (click)="submitAppeal()">
+          <span class="icon-submit">✉</span>
+          Submit Appeal
+        </button>
+      </div>
+    </div>
+  </div>
+}

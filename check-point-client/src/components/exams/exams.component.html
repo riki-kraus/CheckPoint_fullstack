@@ -1,0 +1,194 @@
+<div class="exams-container">
+  <!-- Navigation Header
+    <nav class="nav-header" @slideInLeft>
+      <div class="nav-left">
+        <div class="logo">
+          <div class="logo-icon"></div>
+          <span>EduTest</span>
+        </div>
+        <div class="nav-links">
+          <a href="#" class="nav-link">
+            <i class="icon-dashboard"></i>
+            Dashboard
+          </a>
+          <a href="#" class="nav-link active">
+            <i class="icon-exams"></i>
+            Exams
+          </a>
+          <a href="#" class="nav-link">
+            <i class="icon-calendar"></i>
+            Calendar
+          </a>
+          <a href="#" class="nav-link">
+            <i class="icon-notifications"></i>
+            Notifications
+          </a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <span class="user-name">Alex Johnson</span>
+        <div class="user-avatar"></div>
+      </div>
+    </nav> -->
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Header Section -->
+    <div class="page-header" @fadeInUp>
+      <div class="header-content">
+        <h1 class="page-title">Your Exams</h1>
+        <p class="page-subtitle">View and manage all your examination results</p>
+      </div>
+
+      <!-- Search and Filter -->
+      <div class="search-filter-section">
+        <div class="search-container">
+          <div class="search-input-wrapper">
+            <i class="search-icon"></i>
+            <input type="text" placeholder="Search exams..." class="search-input" [(ngModel)]="searchTerm"
+              (input)="onSearchChange()" />
+          </div>
+        </div>
+
+        <div class="filter-container">
+          <i class="filter-icon"></i>
+          <select class="subject-filter" [(ngModel)]="selectedSubject" (change)="onSubjectChange()">
+            @for (subject of subjects; track subject) {
+            <option [value]="subject">{{subject}}</option>
+            }
+          </select>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- Exams Grid -->
+    <div class="exams-grid" @listAnimation>
+      @for (submission of filteredExams; track submission.id)
+      {
+      <div class="exam-card" @cardAnimation>
+        <!-- Status Badge -->
+        <div class="status-badge" [style.background-color]="getStatusColor(submission.score)">
+          {{this.status}}
+        </div>
+
+        <!-- Exam Header -->
+        <div class="exam-header">
+          <!-- <h3 class="exam-title">{{exam.examName}}</h3> -->
+          <p class="exam-date">{{submission.exam?.dateExam}}</p>
+        </div>
+
+        <!-- Subject and Score -->
+        <div class="exam-info">
+          <div class="subject-name">{{submission.exam?.subject}}</div>
+          @if (submission.score) {
+          <div class="score-container" @scoreAnimation>
+            <span class="score" [style.color]="getScoreColor(submission.score)">
+              {{submission.score}}%
+            </span>
+          </div>
+          } @else {
+          <div class="score-container">
+            <span class="score pending">Pending</span>
+          </div>
+          }
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="exam-actions">
+          @if (submission.score && submission.score < 60) { <button class="appeal-btn"
+            (click)="submitAppeal(submission)" @buttonHover>
+            <div class="action-btn" class="appeal-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 9v4M12 17h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <span class="appeal-text">submitAppeal</span>
+            </button>
+            }
+        </div>
+        <div class="file-container">
+          <!-- File Card 1 - Word Document -->
+          @if (submission.file_Url_FeedBack) {
+          <div class="file-card"> <!-- </div>(click)="handleFileClick('calculus_feedback')"> -->
+            <div class="file-info">
+              <!-- <div class="file-icon">📄</div> -->
+              <div class="file-details">
+                <h3>Calculus_Final_Feedback.docx</h3>
+                <p>Word Document • 245 KB</p>
+              </div>
+            </div>
+            <div class="file-actions">
+              <!-- <button class="action-btn" (click)="viewFeedback(exam)">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                  </svg>
+                  View
+                </button> -->
+              <button class="action-btn" (click)="downloadFile(submission,true)">
+                <!-- event.stopPropagation(); -->
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                </svg>
+                Download
+              </button>
+            </div>
+          </div>
+          }
+          @if (submission.file_Url) {
+          <!-- File Card 2 - PDF Document -->
+          <div class="file-card" (click)="viewScannedExam(submission)">
+            <div class="file-info">
+              <!-- <div class="file-icon">📄</div> -->
+              <div class="file-details">
+                <h3>Calculus_Final_Graded.jpg</h3>
+                <p>JPG • 1.2 MB</p>
+              </div>
+            </div>
+            <div class="file-actions">
+              <!-- <button class="action-btn" onclick="event.stopPropagation(); viewScannedExam(exam)"> -->
+              <button class="action-btn" (click)="viewScannedExam(submission);">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                </svg>
+                View
+              </button>
+              <button class="action-btn" (click)="downloadFile(submission,false);">
+                <!-- event.stopPropagation(); -->
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                </svg>
+                Download
+              </button>
+            </div>
+          </div>
+          }
+        </div>
+        <!-- Hover Effect Overlay -->
+        <div class="card-overlay"></div>
+       </div>
+      }
+    </div>
+
+    <!-- Empty State -->
+    @if (filteredExams.length === 0) {
+    <div class="empty-state" @fadeInUp>
+      <div class="empty-icon"></div>
+      <h3>No exams found</h3>
+      <p>Try adjusting your search or filter criteria</p>
+    </div>
+    }
+  </main>
+
+  <app-grade-appeal [isVisible]="isAppealDialogOpen" [submission]="selectedSubmission"
+    (closeModal)="isAppealDialogOpen = false" (submitAppeal)="handleAppealSubmission($event)">
+  </app-grade-appeal>
+  <app-feedback-modal [isOpen]="showFeedbackModal" [exam]="selectedExam" (close)="closeFeedbackModal()">
+  </app-feedback-modal>
+
+</div>
+

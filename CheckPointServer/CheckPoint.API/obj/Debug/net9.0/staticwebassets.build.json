@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "fv8lPXt3jGASYL78BMbkXJhMUZ9S+4o3kVdsvk1OvJc=",
+  "Source": "CheckPoint.API",
+  "BasePath": "_content/CheckPoint.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

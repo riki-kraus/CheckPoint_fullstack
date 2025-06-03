@@ -1,0 +1,69 @@
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.deps.json
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.runtimeconfig.json
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.dll
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.pdb
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Core.dll
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Core.pdb
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.AssemblyInfoInputs.cache
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.AssemblyInfo.cs
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoi.B9E892BA.Up2Date
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.dll
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\refint\CheckPoint.Data.dll
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.pdb
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.genruntimeconfig.cache
+C:\Users\User\Downloads\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\ref\CheckPoint.Data.dll
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.deps.json
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.runtimeconfig.json
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.dll
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.pdb
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Core.dll
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Core.pdb
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.csproj.AssemblyReference.cache
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.AssemblyInfoInputs.cache
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.AssemblyInfo.cs
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoi.B9E892BA.Up2Date
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.dll
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\refint\CheckPoint.Data.dll
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.pdb
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.genruntimeconfig.cache
+C:\Users\User\Documents\פרויקט מעודכנוש\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\ref\CheckPoint.Data.dll
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.deps.json
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.runtimeconfig.json
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.dll
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.pdb
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Core.dll
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Core.pdb
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.csproj.AssemblyReference.cache
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.AssemblyInfoInputs.cache
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.AssemblyInfo.cs
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoi.B9E892BA.Up2Date
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.dll
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\refint\CheckPoint.Data.dll
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.pdb
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.genruntimeconfig.cache
+C:\Users\User\Documents\next\CheckPoint\CheckPoint.Data\obj\Debug\net9.0\ref\CheckPoint.Data.dll
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.deps.json
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.runtimeconfig.json
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.dll
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Data.pdb
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Core.dll
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\bin\Debug\net9.0\CheckPoint.Core.pdb
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.csproj.AssemblyReference.cache
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.AssemblyInfoInputs.cache
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.AssemblyInfo.cs
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.sourcelink.json
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoi.B9E892BA.Up2Date
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.dll
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\refint\CheckPoint.Data.dll
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.pdb
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\CheckPoint.Data.genruntimeconfig.cache
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.Data\obj\Debug\net9.0\ref\CheckPoint.Data.dll

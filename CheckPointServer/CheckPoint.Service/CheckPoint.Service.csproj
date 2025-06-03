@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="4.0.0-preview.10" />
+    <PackageReference Include="AWSSDK.S3" Version="4.0.0-preview.10" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="CSharpFunctionalExtensions" Version="3.5.1" />
+    <PackageReference Include="FluentAssertions.CSharpFunctionalExtensions" Version="1.0.2" />
+    <PackageReference Include="MySql.Data" Version="9.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CheckPoint.Core\CheckPoint.Core.csproj" />
+  </ItemGroup>
+
+</Project>

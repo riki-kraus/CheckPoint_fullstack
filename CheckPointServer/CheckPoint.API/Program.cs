@@ -1,0 +1,116 @@
+using Amazon.Runtime;
+using Amazon.S3;
+using Amazon;
+using CheckPoint.Core;
+using CheckPoint.Core.IRepositories;
+using CheckPoint.Core.Services;
+using CheckPoint.Data;
+using CheckPoint.Data.Repositories;
+using CheckPoint.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using Music.Api.Extensions;
+using System.Text;
+using System.Text.Json.Serialization;
+using FluentAssertions.Common;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+//builder.Configuration.AddEnvironmentVariables();
+
+builder.Services.AddDefaultAWSOptions(builder.Configuration.GetAWSOptions());
+builder.Services.AddAWSService<IAmazonS3>();
+// הוספת קונטרולרים
+builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.WriteIndented = true;
+});
+
+// הוספת Swagger
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+});
+
+builder.Services.AddOpenApi();
+//builder.Services.AddDbContext<DataContext>();
+//builder.Services.AddDbContext<DataContext>();
+//builder.Services.AddDbContext<DataContext>(options =>
+//{
+//    var configuration = builder.Services.BuildServiceProvider().GetRequiredService<IConfiguration>();
+//    var connectionString = configuration.GetConnectionString("CheckPointDB");
+
+//    //לזכור לבדוק אם להוריד
+//    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+//});
+builder.Services.AddDependencyInjectoions();
+builder.Services.AddSwagger();
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+
+//builder.Services.AddDbContext<DataContext>(options =>
+//{
+//    var configuration = builder.Configuration; // Use builder.Configuration directly instead of BuildServiceProvider
+//    var connectionString = configuration.GetConnectionString("CheckPointDB");
+
+//    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+//});
+//builder.Services.AddDbContext<DataContext>(options =>
+//{
+//    var configuration = builder.Configuration;
+//    var connectionString = configuration.GetConnectionString("CheckPointDB");
+//    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+//});
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    var configuration = builder.Configuration;
+    var connectionString = configuration.GetConnectionString("CheckPointDB");
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+}, ServiceLifetime.Scoped); // <-- חשוב מאוד
+
+// הוספת Authentication ו Authorization
+builder.AddJwtAuthentication();
+builder.AddJwtAuthorization();
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+// הוספת CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", builder =>
+    {
+        builder.AllowAnyOrigin()  // מאפשר כל מקור (כולל localhost)
+               .AllowAnyMethod()  // מאפשר כל שיטה (GET, POST, PUT, DELETE וכו')
+               .AllowAnyHeader(); // מאפשר כל כותרת
+    });
+});
+
+var app = builder.Build();
+
+// הפעלת CORS עם המדיניות המתאימה
+app.UseCors("AllowAllOrigins");
+
+// הגדרת הפייפליין של הבקשות
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    c.RoutePrefix = string.Empty; // מציג את ה-Swagger UI ב-root URL
+});
+
+app.Run();

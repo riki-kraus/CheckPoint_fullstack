@@ -1,0 +1,31 @@
+// import { HttpInterceptorFn } from '@angular/common/http';
+// export const TokenInterceptor: HttpInterceptorFn = (req, next) => {
+//     const token = localStorage.getItem('token');
+//     if (token) {
+//         const clonedReq = req.clone({
+//             setHeaders: {
+//                 Authorization: `Bearer ${token}`
+//             }
+//         });
+//         return next(clonedReq);
+//     }
+//     return next(req);
+// };
+
+import { HttpInterceptorFn } from '@angular/common/http';
+import { environment } from '../environments/environment';
+
+export const TokenInterceptor: HttpInterceptorFn = (req, next) => {
+  const token = localStorage.getItem('token');
+
+  // אם ה-URL לא מלא (כלומר לא מתחיל ב-http), נוסיף את baseUrl מהסביבה
+  const apiUrl = req.url.startsWith('http') ? req.url : `${environment.apiUrl}${req.url}`;
+  const clonedReq = req.clone({
+    url: apiUrl,
+    setHeaders: token ? {
+      Authorization: `Bearer ${token}`
+    } : {}
+  });
+
+  return next(clonedReq);
+};
