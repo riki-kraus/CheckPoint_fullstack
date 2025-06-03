@@ -57,7 +57,7 @@ export const uploadFileToS3 = async (
     await axiosInstance.put(presignedUrl, file, {
       headers: {
         "Content-Type": file.type,
-        "x-amz-acl": "bucket-owner-full-control",
+        // "x-amz-acl": "bucket-owner-full-control",
       },
       onUploadProgress: (event) => {
         const percent = Math.round((event.loaded * 100) / (event.total || 1));
