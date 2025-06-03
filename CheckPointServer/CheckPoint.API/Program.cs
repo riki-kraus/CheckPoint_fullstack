@@ -36,16 +36,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddOpenApi();
-//builder.Services.AddDbContext<DataContext>();
-//builder.Services.AddDbContext<DataContext>();
-//builder.Services.AddDbContext<DataContext>(options =>
-//{
-//    var configuration = builder.Services.BuildServiceProvider().GetRequiredService<IConfiguration>();
-//    var connectionString = configuration.GetConnectionString("CheckPointDB");
 
-//    //לזכור לבדוק אם להוריד
-//    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
-//});
 builder.Services.AddDependencyInjectoions();
 builder.Services.AddSwagger();
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
@@ -113,4 +104,5 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = string.Empty; // מציג את ה-Swagger UI ב-root URL
 });
 
+app.MapGet("/", () => "Welcome to CheckPoint API!");
 app.Run();
