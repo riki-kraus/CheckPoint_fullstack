@@ -11,7 +11,7 @@ namespace CheckPoint.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Policy = "Admin&Studnet")]
+    //[Authorize(Policy = "Admin&Studnet")]
 
     public class DashBoardController : ControllerBase
     {

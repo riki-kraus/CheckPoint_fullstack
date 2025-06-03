@@ -25,7 +25,7 @@ namespace CheckPoint.API.Controllers
             _mapper = mapper;
         }
 
-        [Authorize(Policy = "Admin&Student")]
+        //[Authorize(Policy = "Admin&Student")]
         [HttpGet("StudentId/{id}")]
         public async Task<ActionResult> Get(int id)
         {
@@ -37,7 +37,7 @@ namespace CheckPoint.API.Controllers
             var listDto = _mapper.Map<IEnumerable<GetSubmissionDto>>(submissions);
             return Ok(listDto);
         }
-        [Authorize(Policy = "Admin&Student")]
+        //[Authorize(Policy = "Admin&Student")]
 
         [HttpGet("examIdAndStudentId/{examId}/{studentId}")]
         public async Task<ActionResult> GetByExamIdAndStudentId(int examId, int studentId)
@@ -50,7 +50,7 @@ namespace CheckPoint.API.Controllers
             return Ok(dto);
         }
 
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "AdminOnly")]
 
         // POST api/<SubmissionController>
         [HttpPost]

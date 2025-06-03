@@ -16,7 +16,7 @@ namespace CheckPoint.API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Policy = "Admin")]
+    //[Authorize(Policy = "AdminOnly")]
 
     public class AnswerController : ControllerBase
     {

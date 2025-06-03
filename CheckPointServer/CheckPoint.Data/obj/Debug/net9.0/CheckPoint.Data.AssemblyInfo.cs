@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CheckPoint.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f76544f9bd7ab31d6e4fdc91b6757c9a31224b49")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac9a1e2d6fcde9418fc55546f5eb6314ed733a30")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheckPoint.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheckPoint.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

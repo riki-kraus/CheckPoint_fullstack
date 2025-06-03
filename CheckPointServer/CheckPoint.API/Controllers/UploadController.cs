@@ -17,7 +17,7 @@ public class UploadController : ControllerBase
         _s3Client = s3Client;
         _bucketName = configuration["AWS:BucketName"];
     }
-    [Authorize(Policy = "Admin")]
+    //[Authorize(Policy = "AdminOnly")]
     [HttpGet("presigned-url")]
     public IActionResult GetPresignedUrl(
         string fileName,
@@ -78,7 +78,7 @@ public class UploadController : ControllerBase
         }
     }
     [HttpGet("download-url")]
-    [Authorize(Policy = "Admin&Student")]
+    //[Authorize(Policy = "Admin&Student")]
 
     public async Task<IActionResult> GetDownloadPresignedUrl(string Url)
     {

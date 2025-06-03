@@ -21,7 +21,7 @@ namespace CheckPoint.API.Controllers
             _mapper = mapper;
         }
 
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "AdminOnly")]
         [HttpGet]
 
         public async Task<ActionResult> GetAll()
@@ -35,7 +35,7 @@ namespace CheckPoint.API.Controllers
             return Ok(studentsDto);
         }
 
-        [Authorize(Policy = "Admin&Student")]
+        //[Authorize(Policy = "Admin&Student")]
         [HttpGet("id/{id}")]
         public async Task<ActionResult> GetById(int id)
         {
@@ -44,7 +44,7 @@ namespace CheckPoint.API.Controllers
             var studentDto = _mapper.Map<StudentDto>(student);
             return Ok(studentDto);
         }
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "AdminOnly")]
 
         [HttpGet("class/{className}")]
         public async Task<ActionResult> GetByClass(string className)
@@ -55,7 +55,7 @@ namespace CheckPoint.API.Controllers
             var studentsDto = _mapper.Map<IEnumerable<GetStudentDto>>(students);
             return Ok(studentsDto);
         }
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "AdminOnly")]
         [HttpGet("byFullName")]
         public async Task<IActionResult> GetByFullNameAndClass(
             [FromQuery] string FirstName,
@@ -76,7 +76,7 @@ namespace CheckPoint.API.Controllers
             var studentDto = _mapper.Map<GetStudentDto>(student);
             return Ok(studentDto);
         }
-        [Authorize(Policy = "Admin&Student")]
+        //[Authorize(Policy = "Admin&Student")]
 
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] StudentDto newStudentDto)
@@ -96,7 +96,7 @@ namespace CheckPoint.API.Controllers
             var studentsDto = _mapper.Map<GetStudentDto>(result.Value);
             return Ok(studentsDto);
         }
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "AdminOnly")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] StudentDto updatedStudentDto)
         {
@@ -115,7 +115,7 @@ namespace CheckPoint.API.Controllers
             var studentsDto = _mapper.Map<GetStudentDto>(result.Value);
             return Ok(studentsDto);
         }
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "AdminOnly")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

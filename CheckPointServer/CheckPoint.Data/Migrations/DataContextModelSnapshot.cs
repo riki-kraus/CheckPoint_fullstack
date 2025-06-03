@@ -158,7 +158,7 @@ namespace CheckPoint.Data.Migrations
                 {
                     b.HasBaseType("CheckPoint.Core.Entities.User");
 
-                    b.HasDiscriminator().HasValue("Admin");
+                    b.HasDiscriminator().HasValue("AdminOnly");
                 });
 
             modelBuilder.Entity("CheckPoint.Core.Entities.Student", b =>

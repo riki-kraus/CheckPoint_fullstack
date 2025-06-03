@@ -15,7 +15,7 @@ namespace CheckPoint.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Policy = "Admin")]
+    //[Authorize(Policy = "AdminOnly")]
     public class ExamController : ControllerBase
     {
         private readonly IExamService _examService;
@@ -27,15 +27,6 @@ namespace CheckPoint.API.Controllers
             _mapper = mapper;
         }
 
-
-        // GET: api/<ExamController>
-        //[HttpGet]
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
-
-        // GET api/<ExamController>/5
         [HttpGet]
 
         public async Task<ActionResult<List<GetExamDto>>> GetAllAsync()
@@ -58,20 +49,6 @@ namespace CheckPoint.API.Controllers
             return Ok(examDto);
         }
 
-        //[HttpGet("byStudent/{studentId}")]
-        //public ActionResult GetByStudentId(int studentId)
-        //{
-        //    var exam = _examService.GetByStudentId(studentId);
-        //    return Ok(exam);
-        //}
-
-        //[HttpGet("{@class}/{title}")]
-        //public async Task< ActionResult> GetByStudentId(string @class,string title)
-        //{
-        //    var list = await  _examService.GetByClassAndByTitleAsync(@class,title);
-        //    var listDto = _mapper.Map<IEnumerable<ExamDto>>(list);
-        //    return Ok(listDto);
-        //}
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] ExamDto newexam)
         {
@@ -83,20 +60,12 @@ namespace CheckPoint.API.Controllers
         }
 
 
-        //[HttpPost]
-        //public async Task Post([FromBody] ExamDto newExamDto)
-        //{
-        //    var newExam = _mapper.Map<Exam>(newExamDto);
-        //    await _examService.AddAsync(newExam);
-        //}
-
-        // PUT api/<ExamController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<ExamController>/5
+
         [HttpDelete("{id}")]
         public async Task DeleteAsync(int id)
         {

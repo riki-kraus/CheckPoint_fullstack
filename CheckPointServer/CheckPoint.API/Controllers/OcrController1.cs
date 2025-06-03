@@ -7,10 +7,9 @@ using CheckPoint.Core.Services;
 
 namespace CheckPoint.API.Controllers
 {
-   // [Authorize(Policy = "AdminOnly")]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Policy = "Admin")]
+    //[Authorize(Policy = "AdminOnly")]
 
     public class OcrController : ControllerBase
     {

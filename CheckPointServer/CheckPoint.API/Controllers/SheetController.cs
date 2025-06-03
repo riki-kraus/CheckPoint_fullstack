@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 [ApiController]
 [Route("api/[controller]")]
-[Authorize(Policy = "Admin&Student")]
+//[Authorize(Policy = "Admin&Student")]
 
 public class SheetController : ControllerBase
 {

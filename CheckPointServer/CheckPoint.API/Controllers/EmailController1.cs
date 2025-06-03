@@ -8,7 +8,7 @@ namespace CheckPoint.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Policy = "Admin&Student")]
+    //[Authorize(Policy = "Admin&Student")]
 
     public class EmailController : ControllerBase
     {
