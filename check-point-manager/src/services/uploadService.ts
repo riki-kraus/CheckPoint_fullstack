@@ -1,3 +1,4 @@
+import axios from "axios";
 import axiosInstance from "../utils/axiosInstance";
 
 
@@ -54,7 +55,7 @@ export const uploadFileToS3 = async (
 
     const presignedUrl = response.data.url;
 
-    await axiosInstance.put(presignedUrl, file, {
+    await axios.put(presignedUrl, file, {
       headers: {
         "Content-Type": file.type,
   },
