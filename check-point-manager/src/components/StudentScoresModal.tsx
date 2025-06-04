@@ -234,7 +234,6 @@ import {Dialog,DialogTitle, DialogContent, Table,TableHead, TableRow, TableCell,
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Visibility, Close, Download, Cancel } from "@mui/icons-material";
-import axios from "axios";
 import "../styles/student-scores-modal.css";
 
 import {  Student } from "../Types";
