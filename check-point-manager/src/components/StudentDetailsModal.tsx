@@ -43,7 +43,7 @@ const StudentDetailsModal: React.FC<StudentModalProps> = ({ open, onClose, stude
         } else {
             setFormData({ id: 0,firstName: "", lastName: "", email: "", class: "" ,password:""});
         }
-    }, [student]);
+    }, [student,open]);
 
 
 

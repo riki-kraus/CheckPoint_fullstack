@@ -123,7 +123,7 @@ return (
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4, duration: 0.5 }} className="dashboard-actions">
-              <motion.button whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(79, 224, 182, 0.5)" }} whileTap={{ scale: 0.95 }} className="action-button add-button" onClick={() => (setOpenAddDialog (true))}>
+              <motion.button whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(79, 224, 182, 0.5)" }} whileTap={{ scale: 0.95 }} className="action-button add-button" onClick={() => {setOpenAddDialog (true) ;setCurrentStudent(null);}}>
                   <Add className="button-icon" />
                   <span>Add Student</span>
               </motion.button>
