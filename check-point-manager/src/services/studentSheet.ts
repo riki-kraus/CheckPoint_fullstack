@@ -5,7 +5,7 @@ export const StudentSheetService = {
 
     getStudentEmail: async (firstName: string, lastName: string, className: string) => {
         try {
-            const res = await axiosInstance.get(`/Students/email`, {
+            const res = await axiosInstance.get(`/Sheet/email`, {
                 params: {
                     firstName,
                     lastName,

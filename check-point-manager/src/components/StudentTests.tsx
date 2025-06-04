@@ -99,12 +99,26 @@ const StudentTests = () => {
               lastName: student.lastName
             });
             // שלח מייל
+            console.log("Email to send:", student);
+
             const email = await StudentSheetService.getStudentEmail(student.firstName, student.lastName, student.class);
+            console.log("Email to send:", email);
             await EmailService.sendAnEmail(
-              `${student.firstName} ${student.lastName}`,
+              ` הי ${student.firstName} ${student.lastName}!`,
               email,
-              " לרישום נה להכנס ללינק הבא : \nעליך להרשם בהקדם\n 📑שלום וברוך הבא למערכת בדיקת המבחנים שלנו!"
+              `
+              <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f5f5f5; color: #333;">
+                <h2 style="color: #2c3e50;">שלום וברוך הבא למערכת בדיקת המבחנים שלנו! 📑</h2>
+                <p>עליך להירשם בהקדם דרך הקישור הבא:</p>
+                <a href="https://checkpoint-client-pi2r.onrender.com"
+                   style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+                   מעבר לרישום
+                </a>
+                <p style="margin-top: 20px;">בהצלחה!<br/>צוות CheckPoint</p>
+              </div>
+              `
             );
+            
             setHasError(true);
           }
         }
