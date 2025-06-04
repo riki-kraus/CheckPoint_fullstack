@@ -239,6 +239,7 @@ import "../styles/student-scores-modal.css";
 
 import {  Student } from "../Types";
 import { SubmissionService } from "../services/SubmissionService";
+import axiosInstance from "../utils/axiosInstance";
 const StudentScoresModal = ({ open, onClose ,currentStudent}: any) => {
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
     const [student, setStudent] = useState<Student | null>(null);
@@ -277,7 +278,7 @@ const StudentScoresModal = ({ open, onClose ,currentStudent}: any) => {
 
     const openPreview = async (url: string) => {
         try {
-            const response = await axios.get("https://localhost:50397/api/upload/download-url", {
+            const response = await axiosInstance.get("/upload/download-url", {
                 params: { url: encodeURIComponent(url) },
             });
             setPreviewUrl(response.data.url);
