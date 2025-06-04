@@ -25,6 +25,8 @@ export const LoginService = {
 
       if (role === "Admin") {
         localStorage.setItem("token", token);
+        const profile={email:"maof5728@gmail.com",name:"Riki Kraus",picture:'/images/profil-manager.jpg'}
+        localStorage.setItem("profile", JSON.stringify(profile));
         return { success: true };
       } else {
         return { success: false, error: "Unauthorized: Admin access required." };

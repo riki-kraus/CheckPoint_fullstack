@@ -63,27 +63,6 @@ const Header = () => {
     const handleProfileClick = () => {
         navigate('/profile');
     };
-
-    // const responseGoogle = (response: any) => {
-    //     console.log("Google login response:", response);
-    //     setIsLoginModalOpen(false);
-    //     setIsLoggedIn(true);
-        
-    //     // עדכון פרטי משתמש (יכול להגיע מהתגובה של Google)
-    //     setUserInfo({
-    //         name: response.profileObj?.name || 'משתמש',
-    //         email: response.profileObj?.email || 'user@example.com',
-    //         avatar: response.profileObj?.imageUrl
-    //     });
-        
-    //     api.success({
-    //         message: 'התחברת בהצלחה עם Google',
-    //         description: 'ברוך הבא למערכת ExamAI!',
-    //         placement: 'topRight',
-    //         className: 'rtl-notification',
-    //     });
-    // };
-
     return (
         <>
             {contextHolder}
@@ -133,10 +112,7 @@ const Header = () => {
                             <FaClipboardCheck className="nav-icon" />
                             Tests
                         </motion.li>
-                        {/* <motion.li whileHover={{ scale: 1.1, color: "#64ffda" }} onClick={() => navigate('/tests')}>
-                            <FaClipboardCheck className="nav-icon" />
 
-                        </motion.li> */}
                     </ul>
                 </motion.nav>
 
@@ -148,9 +124,6 @@ const Header = () => {
                 >
                     {isLoggedIn ? (
                         <UserProfileMenu
-                            // userName={userInfo.name}
-                            // userEmail={userInfo.email}
-                            // userAvatar={userInfo.avatar}
                             onSignOut={handleSignOut}
                             onProfileClick={handleProfileClick}
                         />
