@@ -65,10 +65,14 @@ export const uploadFileToS3 = async (
         }
       },
     });
-
+console.log(presignedUrl)
     return { success: true, fileName: finalFileName };
   } catch (error) {
     console.error("❌ שגיאה בהעלאה:", error);
+    console.log(await axiosInstance.get("/upload/presigned-url", {
+      params,
+    }))
+//להוריד
     throw new Error("אירעה שגיאה במהלך ההעלאה.");
   }
 };

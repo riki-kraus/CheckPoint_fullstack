@@ -419,7 +419,7 @@ interface FileIconProps {
   type: 'pdf' | 'image' | 'doc' | 'file';
 }
 
-const Upload_s3: React.FC = () => {
+const Upload_s3= () => {
   const [progress, setProgress] = useState<{ [key: string]: number }>({});
   const [isUploading, setIsUploading] = useState<boolean>(false);
   const [uploadComplete, setUploadComplete] = useState<boolean>(false);
