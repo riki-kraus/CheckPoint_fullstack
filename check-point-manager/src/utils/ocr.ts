@@ -3,9 +3,7 @@ import { Exam, Student } from "../Types";
 
 
 
-const encodeForUrl = (text: string) => {
-  return encodeURIComponent(text); // ממיר כל תו לפורמט URL תקני
-};
+
 
 export const extractExam = (words: any[]): Exam => {
     const getText = (start: number, count: number) =>
@@ -23,7 +21,7 @@ export const extractExam = (words: any[]): Exam => {
     return {
       dateExam,
       subject: getText(subjectIdx + 2, 2),
-      file_Url_Exam: `exams/results/${encodeForUrl(getText(subjectIdx + 2, 2))}/${encodeForUrl(dateExam)}` // המרה לפורמט URL
+      file_Url_Exam: `exams/results/${(getText(subjectIdx + 2, 2))}/${(dateExam)}.jpg` // המרה לפורמט URL
     };
 };
 

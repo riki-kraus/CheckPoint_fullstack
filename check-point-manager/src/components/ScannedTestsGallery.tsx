@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Download, Eye, Search, Grid, List,
-  FileText, Calendar, User, X
+  FileText, Calendar, User, X, ArrowRight,
+  ZoomIn, ZoomOut, RotateCcw
 } from 'lucide-react';
 import '../styles/ScannedTestsGallery.css';
 import { ExamService } from '../services/examService';
@@ -16,27 +17,39 @@ const ScannedTestsGallery = () => {
   const [testImages, setTestImages] = useState<Exam[]>([]);
   const [subjects, setSubjects] = useState<string[]>([]);
   const [imageUrls, setImageUrls] = useState<Record<string, string>>({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [modalZoom, setModalZoom] = useState(1);
+  const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
 
   const init = async () => {
-    const exams = await ExamService.getAll();
-    setTestImages(exams);
-    console.log('exams', exams.data);
-    const subjectsList: string[] = Array.from(
+    setIsLoading(true);
+    try {
+      const exams = await ExamService.getAll();
+      setTestImages(exams);
+      console.log('exams', exams.data);
+      const subjectsList: string[] = Array.from(
         new Set(exams.map((img: { subject: string; }) => String(img.subject)))
       );
       setSubjects(['all', ...subjectsList]);
       
-    // Fetch image URLs once
-    const urlMap: Record<string, string> = {};
-    await Promise.all(exams.map(async (exam:Exam) => {
-      if (exam.file_Url_Exam) {
-        const url = await getUrl(exam.file_Url_Exam);
-        if (exam.id) {
-          urlMap[exam.id] = url;
+      // Fetch image URLs once
+      const urlMap: Record<string, string> = {};
+      await Promise.all(exams.map(async (exam: Exam) => {
+        if (exam.file_Url_Exam) {
+          const url = await getUrl(exam.file_Url_Exam);
+          if (exam.id) {
+            urlMap[exam.id] = url;
+          }
         }
-      }
-    }));
-    setImageUrls(urlMap);
+      }));
+      setImageUrls(urlMap);
+    } catch (error) {
+      console.error('Error loading exams:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const getUrl = async (imageUrl: string) => {
@@ -64,20 +77,87 @@ const ScannedTestsGallery = () => {
 
   const openModal = (image: Exam) => {
     setSelectedImage(image);
+    setModalZoom(1);
+    setModalPosition({ x: 0, y: 0 });
   };
 
   const closeModal = () => {
     setSelectedImage(null);
+    setModalZoom(1);
+    setModalPosition({ x: 0, y: 0 });
+  };
+
+  const handleZoomIn = () => {
+    setModalZoom(prev => Math.min(prev + 0.5, 3));
+  };
+
+  const handleZoomOut = () => {
+    setModalZoom(prev => Math.max(prev - 0.5, 0.5));
+  };
+
+  const resetZoom = () => {
+    setModalZoom(1);
+    setModalPosition({ x: 0, y: 0 });
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (modalZoom > 1) {
+      setIsDragging(true);
+      setDragStart({
+        x: e.clientX - modalPosition.x,
+        y: e.clientY - modalPosition.y
+      });
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (isDragging && modalZoom > 1) {
+      setModalPosition({
+        x: e.clientX - dragStart.x,
+        y: e.clientY - dragStart.y
+      });
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
   };
 
   useEffect(() => {
     init();
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closeModal();
+      if (selectedImage) {
+        if (e.key === '+' || e.key === '=') handleZoomIn();
+        if (e.key === '-') handleZoomOut();
+        if (e.key === 'r' || e.key === 'R') resetZoom();
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [selectedImage]);
+
+  if (isLoading) {
+    return (
+      <div className="gallery-container">
+        <div className="glass-background"></div>
+        <div className="loading-container">
+          <div className="loading-animation">
+            <div className="loading-spinner"></div>
+            <div className="loading-particles">
+              {[...Array(12)].map((_, i) => (
+                <div key={i} className="particle" style={{ '--i': i } as any}></div>
+              ))}
+            </div>
+          </div>
+          <h2 className="loading-text">טוען מבחנים...</h2>
+          <div className="loading-progress">
+            <div className="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="gallery-container">
@@ -198,22 +278,74 @@ const ScannedTestsGallery = () => {
         </div>
       )}
 
-      {/* Modal */}
+      {/* Enhanced Modal */}
       {selectedImage && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>
-              <X />
-            </button>
-            <img
-              src={selectedImage.id ? imageUrls[selectedImage.id] : ''}
-              alt={selectedImage.dateExam}
-              className="modal-image"
-            />
+            {/* Modal Header */}
+            <div className="modal-header">
+              <button className="back-btn" onClick={closeModal}>
+                <ArrowRight size={20} />
+                <span>חזרה לגלריה</span>
+              </button>
+              
+              <div className="modal-controls">
+                <button className="modal-control-btn" onClick={handleZoomOut} disabled={modalZoom <= 0.5}>
+                  <ZoomOut size={18} />
+                </button>
+                <span className="zoom-level">{Math.round(modalZoom * 100)}%</span>
+                <button className="modal-control-btn" onClick={handleZoomIn} disabled={modalZoom >= 3}>
+                  <ZoomIn size={18} />
+                </button>
+                <button className="modal-control-btn" onClick={resetZoom}>
+                  <RotateCcw size={18} />
+                </button>
+                <button className="close-modal-btn" onClick={closeModal}>
+                  <X size={20} />
+                </button>
+              </div>
+            </div>
+
+            {/* Scrollable Image Container */}
+            <div 
+              className="modal-image-container"
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
+            >
+              <img
+                src={selectedImage.id ? imageUrls[selectedImage.id] : ''}
+                alt={selectedImage.dateExam}
+                className="modal-image"
+                style={{
+                  transform: `scale(${modalZoom}) translate(${modalPosition.x / modalZoom}px, ${modalPosition.y / modalZoom}px)`,
+                  cursor: modalZoom > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default'
+                }}
+                draggable={false}
+              />
+            </div>
+
+            {/* Modal Details */}
             <div className="modal-details">
               <h2>{selectedImage.dateExam}</h2>
-              <p>נוצר בתאריך: {selectedImage.dateCreated}</p>
-              <p>מקצוע: {selectedImage.subject}</p>
+              <div className="modal-info">
+                <div className="info-item">
+                  <Calendar size={16} />
+                  <span>נוצר בתאריך: {selectedImage.dateCreated}</span>
+                </div>
+                <div className="info-item">
+                  <FileText size={16} />
+                  <span>מקצוע: {selectedImage.subject}</span>
+                </div>
+              </div>
+              <button
+                className="download-full-btn"
+                onClick={() => downloadImage(selectedImage.file_Url_Exam, `${selectedImage.dateExam}.jpg`)}
+              >
+                <Download size={16} />
+                הורד מבחן
+              </button>
             </div>
           </div>
         </div>

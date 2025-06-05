@@ -3,6 +3,7 @@
 /* Container */
 .notifications-container {
     position: relative;
+    left: -650px;
   }
   
   /* Notification Bell Button */

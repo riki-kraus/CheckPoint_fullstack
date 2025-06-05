@@ -209,7 +209,8 @@ const Header = () => {
         { icon: <FaHome />, label: 'Home', path: '/' },
         { icon: <FaTachometerAlt />, label: 'Dashboard', path: '/dashboard' },
         { icon: <FaChartBar />, label: 'Statistics', path: '/statistics' },
-        { icon: <FaClipboardCheck />, label: 'Tests', path: '/tests' },
+       {  label: 'Show Tests', path: '/show-tests' },
+        // { icon: <FaClipboardCheck />, label: 'Tests', path: '/tests' },
     ];
 
     const handleProtectedClick = (path: string) => {
