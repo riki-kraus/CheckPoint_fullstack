@@ -54,34 +54,34 @@ builder.AddJwtAuthorization();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
-// הוספת CORS
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAllOrigins", builder =>
-    {
-        builder.AllowAnyOrigin()  // מאפשר כל מקור (כולל localhost)
-               .AllowAnyMethod()  // מאפשר כל שיטה (GET, POST, PUT, DELETE וכו')
-               .AllowAnyHeader(); // מאפשר כל כותרת
-    });
-});
+//// הוספת CORS
 //builder.Services.AddCors(options =>
 //{
-//    options.AddPolicy("MyCorsPolicy", builder =>
+//    options.AddPolicy("AllowAllOrigins", builder =>
 //    {
-//        builder
-//            .WithOrigins("http://localhost:5173", "https://checkpoint-manager.onrender.com", "https://checkpoint-client-pi2r.onrender.com")  // ה-origin של ה-client שלך
-//            .AllowAnyHeader()
-//            .AllowAnyMethod()
-//            .AllowCredentials();  // חובה לאפשר credentials
+//        builder.AllowAnyOrigin()  // מאפשר כל מקור (כולל localhost)
+//               .AllowAnyMethod()  // מאפשר כל שיטה (GET, POST, PUT, DELETE וכו')
+//               .AllowAnyHeader(); // מאפשר כל כותרת
 //    });
 //});
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyCorsPolicy", builder =>
+    {
+        builder
+            .WithOrigins("http://localhost:5173", "https://checkpoint-manager.onrender.com", "https://checkpoint-client-pi2r.onrender.com")  // ה-origin של ה-client שלך
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();  // חובה לאפשר credentials
+    });
+});
 builder.Services.AddSignalR();
 
 var app = builder.Build();
 
 // הפעלת CORS עם המדיניות המתאימה
-app.UseCors("AllowAllOrigins");
-//app.UseCors("MyCorsPolicy");
+//app.UseCors("AllowAllOrigins");
+app.UseCors("MyCorsPolicy");
 
 // הגדרת הפייפליין של הבקשות
 if (app.Environment.IsDevelopment())

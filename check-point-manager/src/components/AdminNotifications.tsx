@@ -19,7 +19,7 @@ const AdminNotifications: React.FC = () => {
 const onMessageReceived = useCallback((notification: NotificationAdmin) => {
   setNotifications(prev => [notification, ...prev]);
 }, []);
-const url=import.meta.env.VITE_API_URL
+const url=import.meta.env.VITE_API_BASE_URL
   useSignalR(onMessageReceived, `${url}/hubs/notification`);
 
   const unreadCount = notifications.filter(n => !n.read).length;

@@ -7,6 +7,7 @@ export const ExamService = {
     getAll: async () => {
         try {
             const res = await axiosInstance.get('/Exam');
+            console.log("Exams fetched successfully:", res.data);
             return res.data;
         } catch (e: any) {
             console.error("Error fetching exams:", e);

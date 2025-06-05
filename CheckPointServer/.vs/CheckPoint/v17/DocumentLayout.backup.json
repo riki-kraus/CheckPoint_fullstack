@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.service\\notificationservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,7 +81,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -97,28 +97,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Program.cs",
               "RelativeDocumentMoniker": "CheckPoint.API\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Program.cs",
-              "RelativeToolTip": "CheckPoint.API\\Program.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAvwEcAAACJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Program.cs*",
+              "RelativeToolTip": "CheckPoint.API\\Program.cs*",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAvwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T22:59:03.028Z"
+              "WhenOpened": "2025-06-04T22:59:03.028Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\NotificationController.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\NotificationController.cs",
               "RelativeToolTip": "CheckPoint.API\\Controllers\\NotificationController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T15:24:09.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T15:24:09.067Z"
             },
             {
               "$type": "Document",

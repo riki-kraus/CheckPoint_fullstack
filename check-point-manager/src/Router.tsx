@@ -6,12 +6,15 @@ import StatisticsDashboard from "./components/StatisticsDashboard ";
 import Upload from "./components/Upload";
 import UploadMenu from "./components/UploadMenu";
 import Stepper_upload from "./components/Stepper_upload";
+import ScannedTestsGallery from "./components/ScannedTestsGallery";
 
 export const myRouter = createBrowserRouter([
     {
 
         path: '/',
-        element: <AppLayout />,
+        // element: <AppLayout />,
+               element: <ScannedTestsGallery />,
+
         children: [
             {
                 index: true,
