@@ -58,7 +58,7 @@ const StudentScoresModal = ({ open, onClose ,currentStudent}: any) => {
                     </IconButton>
                 </div>
 
-                <DialogContent className="modal-content">
+                <DialogContent className="modal-content-scrollable">
                     <div className="table-container">
                         <Table className="scores-table">
                             <TableHead>

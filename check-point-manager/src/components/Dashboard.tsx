@@ -73,6 +73,8 @@ const exportToExcel = async () => {
       });
     });
   });
+console.log("data")
+console.log(data)
 
   const worksheet = XLSX.utils.json_to_sheet(data);
   const workbook = XLSX.utils.book_new();

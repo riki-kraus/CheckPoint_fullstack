@@ -5,6 +5,13 @@
   width: 8px;
   height: 8px;
 }
+.modal-content-scrollable {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 8px;
+  background-color: #000000;
+
+}
 
 /* רקע של אזור הגלילה */
 .table-container::-webkit-scrollbar-track,
