@@ -1,73 +1,30 @@
-import React, { useState } from 'react';
-import { Bell, X, Check, AlertTriangle, Info, CheckCircle, Trash2, Eye } from 'lucide-react';
-import '../styles/AdminNotifications.css';
 
-interface Notification {
-  id: number;
-  title: string;
-  message: string;
-  type: 'info' | 'success' | 'warning' | 'error';
-  timestamp: Date;
-  read: boolean;
-  priority: 'low' | 'medium' | 'high';
-}
+
+import React, { useCallback, useState } from 'react';
+import { Bell, Check, CheckCircle, Info, AlertTriangle, Trash2, X } from 'lucide-react';
+import '../styles/AdminNotifications.css';
+import { useSignalR } from './SignalRService';
+import { NotificationAdmin, NotificationType } from '../Types';
+
+
+type FilterType = 'all' | 'read' | 'unread';
 
 const AdminNotifications: React.FC = () => {
-  const [notifications, setNotifications] = useState<Notification[]>([
-    {
-      id: 1,
-      title: 'בחינה חדשה נוצרה',
-      message: 'בחינת מתמטיקה לכיתה י\' נוצרה בהצלחה ומחכה לאישור',
-      type: 'info',
-      timestamp: new Date(Date.now() - 5 * 60 * 1000),
-      read: false,
-      priority: 'medium'
-    },
-    {
-      id: 2,
-      title: 'התראת מערכת',
-      message: 'זוהתה פעילות חשודה במערכת - יש לבדוק את יומני האבטחה',
-      type: 'warning',
-      timestamp: new Date(Date.now() - 15 * 60 * 1000),
-      read: false,
-      priority: 'high'
-    },
-    {
-      id: 3,
-      title: 'עדכון מערכת הושלם',
-      message: 'עדכון גרסה 2.4.1 הותקן בהצלחה. כל המערכות פעילות כרגיל',
-      type: 'success',
-      timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000),
-      read: true,
-      priority: 'low'
-    },
-    {
-      id: 4,
-      title: 'דוח ציונים זמין',
-      message: 'דוח ציונים שבועי מוכן לצפייה ולהורדה',
-      type: 'info',
-      timestamp: new Date(Date.now() - 3 * 60 * 60 * 1000),
-      read: false,
-      priority: 'medium'
-    },
-    {
-      id: 5,
-      title: 'בעיה בחיבור לשרת',
-      message: 'זוהתה בעיה זמנית בחיבור לשרת הנתונים - צוות הטכני טיפל בבעיה',
-      type: 'error',
-      timestamp: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000),
-      read: true,
-      priority: 'high'
-    }
-  ]);
-
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [filter, setFilter] = useState<'all' | 'unread' | 'read'>('all');
+  const [notifications, setNotifications] = useState<NotificationAdmin[]>([]);
   const [selectedNotifications, setSelectedNotifications] = useState<number[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [filter, setFilter] = useState<FilterType>('all');
+
+// בתוך הקומפוננטה:
+const onMessageReceived = useCallback((notification: NotificationAdmin) => {
+  setNotifications(prev => [notification, ...prev]);
+}, []);
+const url=import.meta.env.VITE_API_URL
+  useSignalR(onMessageReceived, `${url}/hubs/notification`);
 
   const unreadCount = notifications.filter(n => !n.read).length;
 
-  const getNotificationIcon = (type: string) => {
+  const getNotificationIcon = (type: NotificationType) => {
     switch (type) {
       case 'success':
         return <CheckCircle className="notification-icon" />;
@@ -82,11 +39,12 @@ const AdminNotifications: React.FC = () => {
 
   const formatTimeAgo = (date: Date): string => {
     const now = new Date();
-    const diff = now.getTime() - date.getTime();
+    const diff = now.getTime() - new Date(date).getTime();
     const minutes = Math.floor(diff / (1000 * 60));
     const hours = Math.floor(diff / (1000 * 60 * 60));
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
+    if (minutes < 1) return `לפני רגע`;
     if (minutes < 60) return `לפני ${minutes} דקות`;
     if (hours < 24) return `לפני ${hours} שעות`;
     return `לפני ${days} ימים`;
@@ -94,16 +52,12 @@ const AdminNotifications: React.FC = () => {
 
   const markAsRead = (id: number) => {
     setNotifications(prev =>
-      prev.map(notification =>
-        notification.id === id ? { ...notification, read: true } : notification
-      )
+      prev.map(n => (n.id === id ? { ...n, read: true } : n))
     );
   };
 
   const markAllAsRead = () => {
-    setNotifications(prev =>
-      prev.map(notification => ({ ...notification, read: true }))
-    );
+    setNotifications(prev => prev.map(n => ({ ...n, read: true })));
   };
 
   const deleteNotification = (id: number) => {
@@ -122,77 +76,65 @@ const AdminNotifications: React.FC = () => {
     );
   };
 
-  const filteredNotifications = notifications.filter(notification => {
-    if (filter === 'unread') return !notification.read;
-    if (filter === 'read') return notification.read;
+  const filteredNotifications = notifications.filter(n => {
+    if (filter === 'read') return n.read;
+    if (filter === 'unread') return !n.read;
     return true;
   });
 
   return (
     <div className="notifications-container">
-      {/* Notification Bell Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="notification-bell"
+        aria-label="הצג התראות"
       >
         <Bell className="bell-icon" />
-        
         {unreadCount > 0 && (
-          <div className="unread-badge">
-            {unreadCount > 9 ? '9+' : unreadCount}
-          </div>
-        )}
-        
-        {/* Glow effect for unread notifications */}
-        {unreadCount > 0 && (
-          <div className="bell-glow" />
+          <>
+            <div className="unread-badge">{unreadCount > 9 ? '9+' : unreadCount}</div>
+            <div className="bell-glow" />
+          </>
         )}
       </button>
 
-      {/* Notifications Panel */}
       {isOpen && (
         <>
-          {/* Backdrop */}
-          <div 
-            className="notifications-backdrop"
-            onClick={() => setIsOpen(false)}
-          />
-          
-          {/* Panel */}
-          <div className="notifications-panel">
-            
-            {/* Header */}
+          <div className="notifications-backdrop" onClick={() => setIsOpen(false)} />
+          <div className="notifications-panel" role="dialog" aria-modal="true">
             <div className="notifications-header">
               <div className="header-top">
-                <h3 className="notifications-title">
+                <h3 id="notifications-title" className="notifications-title">
                   התראות מנהל
                 </h3>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="close-button"
+                  aria-label="סגור חלון התראות"
                 >
                   <X className="close-icon" />
                 </button>
               </div>
 
-              {/* Filter Tabs */}
-              <div className="filter-tabs">
+              <div className="filter-tabs" role="tablist" aria-label="סינון התראות">
                 {[
                   { key: 'all' as const, label: 'הכל', count: notifications.length },
                   { key: 'unread' as const, label: 'לא נקראו', count: unreadCount },
-                  { key: 'read' as const, label: 'נקראו', count: notifications.length - unreadCount }
+                  { key: 'read' as const, label: 'נקראו', count: notifications.length - unreadCount },
                 ].map(tab => (
                   <button
                     key={tab.key}
                     onClick={() => setFilter(tab.key)}
                     className={`filter-tab ${filter === tab.key ? 'active' : ''}`}
+                    role="tab"
+                    aria-selected={filter === tab.key}
+                    tabIndex={filter === tab.key ? 0 : -1}
                   >
                     {tab.label} ({tab.count})
                   </button>
                 ))}
               </div>
 
-              {/* Actions */}
               {(unreadCount > 0 || selectedNotifications.length > 0) && (
                 <div className="actions-bar">
                   {unreadCount > 0 && (
@@ -204,7 +146,6 @@ const AdminNotifications: React.FC = () => {
                       <span>סמן הכל כנקרא</span>
                     </button>
                   )}
-                  
                   {selectedNotifications.length > 0 && (
                     <button
                       onClick={deleteSelected}
@@ -218,7 +159,6 @@ const AdminNotifications: React.FC = () => {
               )}
             </div>
 
-            {/* Notifications List */}
             <div className="notifications-list">
               {filteredNotifications.length === 0 ? (
                 <div className="empty-state">
@@ -227,97 +167,58 @@ const AdminNotifications: React.FC = () => {
                 </div>
               ) : (
                 <div className="notifications-scroll">
-                  {filteredNotifications.map((notification, index) => (
+                  {filteredNotifications.map((n, i) => (
                     <div
-                      key={notification.id}
-                      className={`notification-item ${notification.read ? 'read' : 'unread'} 
-                                  priority-${notification.priority} type-${notification.type}`}
-                      style={{ animationDelay: `${index * 50}ms` }}
-                      onClick={() => !notification.read && markAsRead(notification.id)}
+                      key={n.id}
+                      className={`notification-item ${n.read ? 'read' : 'unread'} priority-${n.priority} type-${n.type}`}
+                      style={{ animationDelay: `${i * 50}ms` }}
+                      onClick={() => !n.read && markAsRead(n.id)}
+                      role="listitem"
+                      tabIndex={0}
+                      onKeyDown={e => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          !n.read && markAsRead(n.id);
+                        }
+                      }}
+                      aria-label={`${n.title} - ${n.message} - ${n.read ? 'נקראה' : 'לא נקראה'}`}
                     >
                       <div className="notification-content">
-                        {/* Selection Checkbox */}
                         <input
                           type="checkbox"
-                          checked={selectedNotifications.includes(notification.id)}
-                          onChange={() => toggleSelection(notification.id)}
-                          onClick={(e) => e.stopPropagation()}
+                          checked={selectedNotifications.includes(n.id)}
+                          onChange={() => toggleSelection(n.id)}
+                          onClick={e => e.stopPropagation()}
                           className="notification-checkbox"
+                          aria-label={`בחר התראה: ${n.title}`}
                         />
-
-                        {/* Icon */}
-                        <div className={`notification-icon-wrapper type-${notification.type}`}>
-                          {getNotificationIcon(notification.type)}
+                        <div className={`notification-icon-wrapper type-${n.type}`}>
+                          {getNotificationIcon(n.type)}
                         </div>
-
-                        {/* Content */}
                         <div className="notification-text">
                           <div className="notification-header-row">
-                            <h4 className="notification-title-text">
-                              {notification.title}
-                            </h4>
-                            
-                            {/* Unread indicator */}
-                            {!notification.read && (
-                              <div className="unread-dot" />
-                            )}
+                            <h4 className="notification-title-text">{n.title}</h4>
+                            <span className="notification-time">{formatTimeAgo(new Date(n.timestamp))}</span>
                           </div>
-                          
-                          <p className="notification-message">
-                            {notification.message}
-                          </p>
-                          
-                          <div className="notification-footer">
-                            <span className="notification-time">
-                              {formatTimeAgo(notification.timestamp)}
-                            </span>
-                            
-                            {/* Actions */}
-                            <div className="notification-actions">
-                              {!notification.read && (
-                                <button
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    markAsRead(notification.id);
-                                  }}
-                                  className="notification-action-btn mark-read-btn"
-                                  title="סמן כנקרא"
-                                >
-                                  <Eye className="action-btn-icon" />
-                                </button>
-                              )}
-                              
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  deleteNotification(notification.id);
-                                }}
-                                className="notification-action-btn delete-btn"
-                                title="מחק התראה"
-                              >
-                                <Trash2 className="action-btn-icon" />
-                              </button>
-                            </div>
-                          </div>
+                          <p className="notification-message">{n.message}</p>
                         </div>
                       </div>
-
-                      {/* Hover glow effect */}
-                      <div className="notification-hover-glow" />
+                      <button
+                        className="notification-delete"
+                        onClick={e => {
+                          e.stopPropagation();
+                          deleteNotification(n.id);
+                        }}
+                        title="מחק התראה"
+                        aria-label={`מחק התראה: ${n.title}`}
+                      >
+                        <X size={14} />
+                      </button>
                     </div>
                   ))}
                 </div>
               )}
             </div>
-
-            {/* Footer */}
-            {filteredNotifications.length > 0 && (
-              <div className="notifications-footer">
-                <button className="view-all-button">
-                  הצג את כל ההתראות
-                </button>
-              </div>
-            )}
           </div>
         </>
       )}
@@ -326,3 +227,5 @@ const AdminNotifications: React.FC = () => {
 };
 
 export default AdminNotifications;
+
+

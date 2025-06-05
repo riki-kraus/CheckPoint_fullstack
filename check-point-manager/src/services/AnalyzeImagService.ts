@@ -11,6 +11,7 @@ export const analyzeImage = async (base64Image: string) => {
     console.log(response.data);
     return response.data.responses[0]?.textAnnotations.slice(1) || null;
   } catch (error: any) {
+  
     console.error('Error calling server OCR endpoint:', error);
     return null;
   }

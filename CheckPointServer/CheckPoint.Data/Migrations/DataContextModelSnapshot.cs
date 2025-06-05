@@ -76,6 +76,41 @@ namespace CheckPoint.Data.Migrations
                     b.ToTable("Exams");
                 });
 
+            modelBuilder.Entity("CheckPoint.Core.Entities.Notification", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Priority")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("Read")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Notifications");
+                });
+
             modelBuilder.Entity("CheckPoint.Core.Entities.Submission", b =>
                 {
                     b.Property<int>("Id")
@@ -158,7 +193,7 @@ namespace CheckPoint.Data.Migrations
                 {
                     b.HasBaseType("CheckPoint.Core.Entities.User");
 
-                    b.HasDiscriminator().HasValue("AdminOnly");
+                    b.HasDiscriminator().HasValue("Admin");
                 });
 
             modelBuilder.Entity("CheckPoint.Core.Entities.Student", b =>

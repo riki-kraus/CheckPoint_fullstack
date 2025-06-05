@@ -19,6 +19,8 @@ namespace CheckPoint.Data
         public DbSet<Answer> Answers { get; set; }
 
           public DbSet<User> Users { get; set; }
+
+        public DbSet<Notification> Notifications { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }

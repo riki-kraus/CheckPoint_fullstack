@@ -14,7 +14,9 @@ export const extractExam = (words: any[]): Exam => {
     const dateIdx = words.findIndex(w => w.description === "תאריך");
     const subjectIdx = words.findIndex(w => w.description === "מקצוע");
 
-    if (dateIdx === -1 || subjectIdx === -1) throw new Error("שדות חיוניים חסרים");
+    if (dateIdx === -1 || subjectIdx === -1) {
+      throw new Error("שדות חיוניים חסרים");
+    }
 
     const dateExam = getText(dateIdx + 2, 4).replace(/([א-ת])\s'/, "$1'"); // הוספתי כאן את dateExam
 

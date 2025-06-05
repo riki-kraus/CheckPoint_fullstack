@@ -1,5 +1,6 @@
 import axios from "axios";
 import axiosInstance from "../utils/axiosInstance";
+import { NotificationService } from "./NotificationService";
 
 
 
@@ -70,6 +71,13 @@ console.log(presignedUrl)
     return { success: true, fileName: finalFileName };
   } catch (error) {
     console.error("❌ שגיאה בהעלאה:", error);
+    NotificationService.create({
+      title: "error during upload ❌",
+      message: "please try again later",
+      type: "error",
+      priority: "high",
+     timestamp: new Date(),
+    });
     console.log(await axiosInstance.get("/upload/presigned-url", {
       params,
     }))
@@ -97,6 +105,13 @@ export const downloadFileFromS3 = async (
     window.open(presignedUrl, "_blank");
   } catch (error) {
     console.error("❌ שגיאה בהורדה:", error);
+    NotificationService.create({
+      title: "error during download ❌",
+      message: "please try again later",
+      type: "error",
+      priority: "high",
+     timestamp: new Date(),
+    });
     throw new Error("אירעה שגיאה במהלך ההורדה.");
   }
 };

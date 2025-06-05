@@ -16,6 +16,7 @@
     <PackageReference Include="Google.Apis.Sheets.v4" Version="1.69.0.3757" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -28,6 +29,7 @@
     <ProjectReference Include="..\CheckPoint.Core\CheckPoint.Core.csproj" />
     <ProjectReference Include="..\CheckPoint.Data\CheckPoint.Data.csproj" />
     <ProjectReference Include="..\CheckPoint.Service\CheckPoint.Service.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

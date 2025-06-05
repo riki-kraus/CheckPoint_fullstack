@@ -3,108 +3,75 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.service\\notificationservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|solutionrelative:checkpoint.service\\notificationservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\ocrcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\ocrcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.data\\repositories\\notificationrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|solutionrelative:checkpoint.data\\repositories\\notificationrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\dashboardcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\dashboardcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|solutionrelative:checkpoint.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\submissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\submissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Core\\IServices\\INotificationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Core\\IServices\\INotificationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/my_db/True/SqlTable/dbo.Answers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Migrations\\20250605002551_change-Notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CheckPoint.Data\\Migrations\\20250605002551_change-Notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/my_db/True/SqlTable/dbo.Exams.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.data\\repositories\\repositorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|solutionrelative:checkpoint.data\\repositories\\repositorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/my_db/True/SqlTable/dbo.Submissions.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\answercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\answercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|solutionrelative:checkpoint.service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\sheetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\sheetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\emailcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\emailcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.data\\migrations\\20250531225930_amennn.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|solutionrelative:checkpoint.data\\migrations\\20250531225930_amennn.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.data\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE6C572-AE15-44D4-AE33-3C2CB83BCE07}|CheckPoint.Data\\CheckPoint.Data.csproj|solutionrelative:checkpoint.data\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\signalrnotificationdispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\signalrnotificationdispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|solutionrelative:checkpoint.service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.service\\googlesheetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|solutionrelative:checkpoint.service\\googlesheetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Models\\NotificationHub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Models\\NotificationHub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.service\\ocrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|solutionrelative:checkpoint.service\\ocrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.service\\s3service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D45CBADD-16E3-473E-AF91-E983ECEAE65B}|CheckPoint.Service\\CheckPoint.Service.csproj|solutionrelative:checkpoint.service\\s3service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B6088DD-4227-4290-A62C-E175F430DFFD}|CheckPoint.Core\\CheckPoint.Core.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.core\\services\\iocrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B6088DD-4227-4290-A62C-E175F430DFFD}|CheckPoint.Core\\CheckPoint.Core.csproj|solutionrelative:checkpoint.core\\services\\iocrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\ocrcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\ocrcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\submissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\submissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|c:\\users\\user\\documents\\next\\checkpointserver\\checkpoint.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E21BD569-71EA-448D-865F-A63D2CDF377F}|CheckPoint.API\\CheckPoint.API.csproj|solutionrelative:checkpoint.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Services\\NotificationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Services\\NotificationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,88 +81,140 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "dbo.Answers.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/my_db/True/SqlTable/dbo.Answers.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/my_db/True/SqlTable/dbo.Answers.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-03T14:04:18.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "dbo.Exams.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/my_db/True/SqlTable/dbo.Exams.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/my_db/True/SqlTable/dbo.Exams.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-03T14:04:13.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "dbo.Submissions.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/my_db/True/SqlTable/dbo.Submissions.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/my_db/True/SqlTable/dbo.Submissions.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-03T13:45:30.41Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "CheckPoint.Data\\DataContext.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\DataContext.cs",
-              "RelativeToolTip": "CheckPoint.Data\\DataContext.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAzwCYAAAAvAAAAAAAAAA==",
+              "Title": "20250605002551_change-Notification.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Migrations\\20250605002551_change-Notification.cs",
+              "RelativeDocumentMoniker": "CheckPoint.Data\\Migrations\\20250605002551_change-Notification.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Migrations\\20250605002551_change-Notification.cs",
+              "RelativeToolTip": "CheckPoint.Data\\Migrations\\20250605002551_change-Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:51:53.263Z",
+              "WhenOpened": "2025-06-05T00:25:51.991Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\AuthService.cs",
-              "RelativeDocumentMoniker": "CheckPoint.Service\\AuthService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\AuthService.cs",
-              "RelativeToolTip": "CheckPoint.Service\\AuthService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAqwCIAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Program.cs",
+              "RelativeDocumentMoniker": "CheckPoint.API\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Program.cs",
+              "RelativeToolTip": "CheckPoint.API\\Program.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAvwEcAAACJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:51:33.867Z"
+              "WhenOpened": "2025-06-04T22:59:03.028Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "20250531225930_amennn.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Migrations\\20250531225930_amennn.Designer.cs",
-              "RelativeDocumentMoniker": "CheckPoint.Data\\Migrations\\20250531225930_amennn.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Migrations\\20250531225930_amennn.Designer.cs",
-              "RelativeToolTip": "CheckPoint.Data\\Migrations\\20250531225930_amennn.Designer.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAAALsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "CheckPoint.API\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:51:29.729Z"
+              "WhenOpened": "2025-06-04T15:24:09.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ExamController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\ExamController.cs",
-              "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\ExamController.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\ExamController.cs",
-              "RelativeToolTip": "CheckPoint.API\\Controllers\\ExamController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAuwC4AAABRAAAAAAAAAA==",
+              "Title": "NotificationRepository .cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Repositories\\NotificationRepository .cs",
+              "RelativeDocumentMoniker": "CheckPoint.Data\\Repositories\\NotificationRepository .cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Repositories\\NotificationRepository .cs",
+              "RelativeToolTip": "CheckPoint.Data\\Repositories\\NotificationRepository .cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:49:39.273Z",
+              "WhenOpened": "2025-06-04T15:18:27.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SignalRNotificationDispatcher.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\SignalRNotificationDispatcher.cs",
+              "RelativeDocumentMoniker": "CheckPoint.API\\SignalRNotificationDispatcher.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\SignalRNotificationDispatcher.cs",
+              "RelativeToolTip": "CheckPoint.API\\SignalRNotificationDispatcher.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:47:54.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "NotificationService .cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\NotificationService .cs",
+              "RelativeDocumentMoniker": "CheckPoint.Service\\NotificationService .cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\NotificationService .cs",
+              "RelativeToolTip": "CheckPoint.Service\\NotificationService .cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCAAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:39:20.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\NotificationService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:29:56.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NotificationHub.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Models\\NotificationHub.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Models\\NotificationHub.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Models\\NotificationHub.cs",
+              "RelativeToolTip": "Infrastructure\\Models\\NotificationHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:29:53.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Core\\IServices\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Core\\IServices\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Core\\IServices\\INotificationService.cs",
+              "RelativeToolTip": "Infrastructure\\Core\\IServices\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:29:07.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashBoardController1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\DashBoardController1.cs",
+              "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\DashBoardController1.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\DashBoardController1.cs",
+              "RelativeToolTip": "CheckPoint.API\\Controllers\\DashBoardController1.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:23:17.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\User\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json",
@@ -203,12 +222,11 @@
               "RelativeToolTip": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\9c599470-8d56-4a65-a283-33544197a2d7\\secrets.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-03T03:35:59.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T03:35:59.65Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 16,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Dockerfile",
               "RelativeDocumentMoniker": "CheckPoint.API\\Dockerfile",
@@ -220,32 +238,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "UploadController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\UploadController.cs",
               "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\UploadController.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\UploadController.cs",
               "RelativeToolTip": "CheckPoint.API\\Controllers\\UploadController.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAYwEYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T02:39:10.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T02:39:10.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\StudentController.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\StudentController.cs",
               "RelativeToolTip": "CheckPoint.API\\Controllers\\StudentController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAA/wHYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAswHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T02:37:28.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "SubmissionController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\SubmissionController.cs",
               "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\SubmissionController.cs",
@@ -253,12 +270,11 @@
               "RelativeToolTip": "CheckPoint.API\\Controllers\\SubmissionController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T02:35:15.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T02:35:15.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 9,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\UserService.cs",
               "RelativeDocumentMoniker": "CheckPoint.Service\\UserService.cs",
@@ -266,97 +282,12 @@
               "RelativeToolTip": "CheckPoint.Service\\UserService.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAkwBcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T02:10:41.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "S3Service.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\S3Service.cs",
-              "RelativeDocumentMoniker": "CheckPoint.Service\\S3Service.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\S3Service.cs",
-              "RelativeToolTip": "CheckPoint.Service\\S3Service.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T02:10:27.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DashBoardController1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\DashBoardController1.cs",
-              "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\DashBoardController1.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\DashBoardController1.cs",
-              "RelativeToolTip": "CheckPoint.API\\Controllers\\DashBoardController1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T02:05:40.41Z",
+              "WhenOpened": "2025-06-03T02:10:41.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "AnswerController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\AnswerController.cs",
-              "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\AnswerController.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\AnswerController.cs",
-              "RelativeToolTip": "CheckPoint.API\\Controllers\\AnswerController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T02:05:24.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Program.cs",
-              "RelativeDocumentMoniker": "CheckPoint.API\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Program.cs",
-              "RelativeToolTip": "CheckPoint.API\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAApwCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T20:34:54.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "DataContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Migrations\\DataContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "CheckPoint.Data\\Migrations\\DataContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Migrations\\DataContextModelSnapshot.cs",
-              "RelativeToolTip": "CheckPoint.Data\\Migrations\\DataContextModelSnapshot.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAAAKAAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T20:34:50.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IOcrService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Core\\Services\\IOcrService.cs",
-              "RelativeDocumentMoniker": "CheckPoint.Core\\Services\\IOcrService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Core\\Services\\IOcrService.cs",
-              "RelativeToolTip": "CheckPoint.Core\\Services\\IOcrService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T19:43:08.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "OcrService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\OcrService.cs",
-              "RelativeDocumentMoniker": "CheckPoint.Service\\OcrService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\OcrService.cs",
-              "RelativeToolTip": "CheckPoint.Service\\OcrService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T19:42:22.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "OcrController1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\OcrController1.cs",
               "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\OcrController1.cs",
@@ -364,81 +295,20 @@
               "RelativeToolTip": "CheckPoint.API\\Controllers\\OcrController1.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwB4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T19:40:20.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T19:40:20.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "SheetController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\SheetController.cs",
-              "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\SheetController.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\SheetController.cs",
-              "RelativeToolTip": "CheckPoint.API\\Controllers\\SheetController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T19:12:30.766Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "GoogleSheetService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\GoogleSheetService.cs",
-              "RelativeDocumentMoniker": "CheckPoint.Service\\GoogleSheetService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\GoogleSheetService.cs",
-              "RelativeToolTip": "CheckPoint.Service\\GoogleSheetService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T00:41:53.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ServiceExtensions.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Extensions\\ServiceExtensions.cs",
               "RelativeDocumentMoniker": "CheckPoint.API\\Extensions\\ServiceExtensions.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Extensions\\ServiceExtensions.cs",
               "RelativeToolTip": "CheckPoint.API\\Extensions\\ServiceExtensions.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAADMAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAE4AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T00:00:24.772Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EmailController1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\EmailController1.cs",
-              "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\EmailController1.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\EmailController1.cs",
-              "RelativeToolTip": "CheckPoint.API\\Controllers\\EmailController1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T23:44:23.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RepositoryManager.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Repositories\\RepositoryManager.cs",
-              "RelativeDocumentMoniker": "CheckPoint.Data\\Repositories\\RepositoryManager.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Data\\Repositories\\RepositoryManager.cs",
-              "RelativeToolTip": "CheckPoint.Data\\Repositories\\RepositoryManager.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAApwCIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T21:03:13.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CheckPoint.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "CheckPoint.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T23:39:33.644Z"
             }
           ]
         }

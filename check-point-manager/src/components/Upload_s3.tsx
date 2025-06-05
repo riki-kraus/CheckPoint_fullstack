@@ -425,7 +425,7 @@ const Upload_s3= () => {
   const [uploadComplete, setUploadComplete] = useState<boolean>(false);
 
   // קבלת המידע מהקונטקסט
-  const { files, exams, students, setIsAbleNext } = useContext(StepperContext)!;
+  const { files,setFiles, exams, students, setIsAbleNext } = useContext(StepperContext)!;
 
   // Create animated particles on mount
   useEffect(() => {
@@ -481,6 +481,7 @@ const Upload_s3= () => {
       setTimeout(() => {
         alert("✅ כל הקבצים הועלו בהצלחה!");
         setIsAbleNext(true);
+        setFiles([]); // Clear files after upload
       }, 500);
     } catch (error) {
       console.error("❌ שגיאה בהעלאה:", error);

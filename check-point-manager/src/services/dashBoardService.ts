@@ -1,6 +1,7 @@
 import { Submission } from "../Types";
 import axiosInstance from "../utils/axiosInstance";
 import { handleAxiosError } from "../utils/handleAxiosError";
+import { NotificationService } from "./NotificationService";
 
 export const DashBoardService = {
   /**
@@ -50,6 +51,23 @@ export const DashBoardService = {
             sub: subject || null,
           },
         });
+       if(response.data<50)
+          NotificationService.create({
+            title: "PassRate",
+            message: "the pass rate is below 50%",
+            type: "warning",
+            priority: "low",
+           timestamp: new Date(),
+          });
+        else
+        if(response.data>80)
+          NotificationService.create({
+            title: "yey🎆",
+            message: "this is a great pass rate",
+            type: "success",
+            priority: "low",
+           timestamp: new Date(),
+          });
         return response.data;
       } catch (e) {
         handleAxiosError(e, "שגיאה בשליפת אחוז מעבר");

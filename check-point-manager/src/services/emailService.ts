@@ -1,5 +1,6 @@
 import axiosInstance from "../utils/axiosInstance";
 import { handleAxiosError } from "../utils/handleAxiosError";
+import { NotificationService } from "./NotificationService";
 
 
 
@@ -20,7 +21,13 @@ export const EmailService = {
             return res.data;
         } catch (e: any) {
             if (e.response && e.response.status === 404) {
-                alert("המייל לא נשלח");
+                  NotificationService.create({
+                            title: "the email was not sent",
+                            message: "please try again later",
+                            type: "error",
+                            priority: "medium",
+                           timestamp: new Date(),
+                          });
                 return null;
             }
             handleAxiosError(e, "המייל לא נשלח");

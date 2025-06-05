@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CheckPoint.Core.DTOs;
 using CheckPoint.Core.DTOs.Exams;
 using CheckPoint.Core.DTOs.Students;
 using CheckPoint.Core.DTOs.Submissions;
@@ -25,6 +26,7 @@ namespace CheckPoint.Core
             CreateMap<Submission, SubmissionDto>().ReverseMap();
             CreateMap<Submission, GetSubmissionDto>().ReverseMap();
             CreateMap<Manager, ManagerDto>().ReverseMap();
+            CreateMap<NotificationDto, Notification>().ReverseMap();
         }
     }
 }

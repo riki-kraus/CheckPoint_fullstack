@@ -40,6 +40,9 @@
               },
               "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\CheckPoint.Service.csproj": {
                 "projectPath": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Service\\CheckPoint.Service.csproj"
+              },
+              "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -87,6 +90,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.3, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.2.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -443,6 +450,26 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Infrastructure.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\Infrastructure\\Infrastructure.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Core\\CheckPoint.Core.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\next\\CheckPointServer\\CheckPoint.Core\\CheckPoint.Core.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

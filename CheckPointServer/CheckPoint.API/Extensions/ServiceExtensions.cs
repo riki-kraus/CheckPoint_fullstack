@@ -7,6 +7,10 @@ using CheckPoint.Data;
 using CheckPoint.Data.Repositories;
 using CheckPoint.Service;
 using Microsoft.EntityFrameworkCore;
+using CheckPoint.Service.YourApp.Infrastructure.Services;
+using CheckPoint.API.Dispatchers;
+using CheckPoint.Core.Repositories;
+using CheckPoint.Infrastructure.Repositories;
 
 
 namespace Music.Api.Extensions
@@ -72,6 +76,14 @@ namespace Music.Api.Extensions
            services.AddScoped<IAnswerRepository, AnswerRepository>();
            services.AddScoped<IRepositoryManager, RepositoryManager>();
            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<INotificationRepository, NotificationRepository>();
+
+
+            services.AddSignalR();
+            services.AddScoped<INotificationService, NotificationService>(); // מ־Infrastructure
+          services.AddSignalR();
+           services.AddScoped<INotificationDispatcher, SignalRNotificationDispatcher>();
+
 
             //services.AddDbContext<DataContext>(options =>
             //{

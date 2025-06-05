@@ -6,6 +6,7 @@ import { Analyze, extractAnswers, extractExam } from "../utils/ocr";
 import StepperContext from "./context/StepperContext";
 import "../styles/ResultTests.css";
 import { Exam } from "../Types";
+import { NotificationService } from "../services/NotificationService";
 
 const ResultTests = () => {
   const { setIsAbleNext } = useContext(StepperContext)!;
@@ -49,6 +50,13 @@ const ResultTests = () => {
             console.warn("מספר תשובות לא תואם, מוחק מבחן...");
             await AnswerService.deleteByExamId(savedExam.id);
             await ExamService.delete(savedExam.id);
+              NotificationService.create({
+                                    title: "update exam was not successful",
+                                    message: "so ,the exam was deleted ,please upload again",
+                                    type: "error",
+                                    priority: "high",
+                                   timestamp: new Date(),
+                                  });
             return null;
           }
 

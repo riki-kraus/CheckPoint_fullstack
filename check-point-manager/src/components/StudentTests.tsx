@@ -11,6 +11,7 @@ import { StudentService } from "../services/studentService";
 import { StudentSheetService } from "../services/studentSheet";
 import { EmailService } from "../services/emailService";
 import "../styles/StudentTests.css";
+import { NotificationService } from "../services/NotificationService";
 
 
 const StudentTests = () => {
@@ -91,6 +92,13 @@ const StudentTests = () => {
 
           catch (e: any) {
             console.log("the pupil is not exist");
+               NotificationService.create({
+                        title: "this pupil is not registered",
+                        message: "please remember check the pupil's test when she register",
+                        type: "info",
+                        priority: "high",
+                       timestamp: new Date(),
+                      });
             // הסר את הקובץ מהקבצים בצורה תקינה
             updatedFiles[i] = null;
             // הוסף לסטודנטים שלא רשומים
@@ -137,6 +145,13 @@ const StudentTests = () => {
         setCurrentProcessing("Processing completed successfully!");
       } catch (err) {
         console.error("שגיאה בבדיקת מבחנים:", err);
+        NotificationService.create({
+          title: "hoops!",
+          message: "error during exam processing, please try again later",
+          type: "error",
+          priority: "high",
+         timestamp: new Date(),
+        });
         setHasError(true);
       } finally {
         setTimeout(() => {

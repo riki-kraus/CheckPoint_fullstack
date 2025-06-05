@@ -1,6 +1,7 @@
 import { Exam } from "../Types";
 import { handleAxiosError } from "../utils/handleAxiosError";
 import axiosInstance from "../utils/axiosInstance";
+import { NotificationService } from "./NotificationService";
 
 export const ExamService = {
     getAll: async () => {
@@ -31,6 +32,13 @@ export const ExamService = {
         return res.data;
     } catch (e: any) {
         handleAxiosError(e, "שליפת המבחן נכשלה");
+          NotificationService.create({
+                                title: "the exam was not found",
+                                message: "please upload the results test before uploading the submissions",
+                                type: "info",
+                                priority: "high",
+                               timestamp: new Date(),
+                              });
         throw e;
     }
 },

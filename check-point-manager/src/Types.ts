@@ -44,3 +44,13 @@ export interface FileWithProgress {
   progress: number;
   uploading: boolean;
 }
+ export type NotificationType = 'success' | 'warning' | 'error' | 'info';
+export type NotificationAdmin = {
+  id?: number;
+  title: string;
+  message: string;
+  type: NotificationType;
+  priority: 'low' | 'medium' | 'high';
+  read?: boolean;
+  timestamp: Date;
+};

@@ -735,3 +735,4 @@ C:\Users\User\Documents\next\CheckPointServer\CheckPoint.API\obj\Debug\net9.0\re
 C:\Users\User\Documents\next\CheckPointServer\CheckPoint.API\obj\Debug\net9.0\CheckPoint.API.pdb
 C:\Users\User\Documents\next\CheckPointServer\CheckPoint.API\obj\Debug\net9.0\CheckPoint.API.genruntimeconfig.cache
 C:\Users\User\Documents\next\CheckPointServer\CheckPoint.API\obj\Debug\net9.0\ref\CheckPoint.API.dll
+C:\Users\User\Documents\next\CheckPointServer\CheckPoint.API\bin\Debug\net9.0\System.Net.WebSockets.WebSocketProtocol.dll
