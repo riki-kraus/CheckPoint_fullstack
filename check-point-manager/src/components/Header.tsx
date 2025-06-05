@@ -181,7 +181,7 @@
 import { notification } from 'antd';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { FaHome, FaTachometerAlt, FaChartBar, FaClipboardCheck } from 'react-icons/fa';
+import { FaHome, FaTachometerAlt, FaChartBar } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import logoImg from '/images/logo.png';
 import LoginModal from './Login';
