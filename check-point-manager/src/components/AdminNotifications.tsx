@@ -66,7 +66,7 @@ const url=import.meta.env.VITE_API_URL
   };
 
   const deleteSelected = () => {
-    setNotifications(prev => prev.filter(n => !selectedNotifications.includes(n.id)));
+    setNotifications(prev => prev.filter(n => n.id&&!selectedNotifications.filter(Boolean).includes(n.id)));
     setSelectedNotifications([]);
   };
 
@@ -172,13 +172,13 @@ const url=import.meta.env.VITE_API_URL
                       key={n.id}
                       className={`notification-item ${n.read ? 'read' : 'unread'} priority-${n.priority} type-${n.type}`}
                       style={{ animationDelay: `${i * 50}ms` }}
-                      onClick={() => !n.read && markAsRead(n.id)}
+                      onClick={() => n.id&&!n.read && markAsRead(n.id)}
                       role="listitem"
                       tabIndex={0}
                       onKeyDown={e => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault();
-                          !n.read && markAsRead(n.id);
+                          !n.read &&n.id&& markAsRead(n.id);
                         }
                       }}
                       aria-label={`${n.title} - ${n.message} - ${n.read ? 'נקראה' : 'לא נקראה'}`}
@@ -186,8 +186,8 @@ const url=import.meta.env.VITE_API_URL
                       <div className="notification-content">
                         <input
                           type="checkbox"
-                          checked={selectedNotifications.includes(n.id)}
-                          onChange={() => toggleSelection(n.id)}
+                          checked={n.id !== undefined && selectedNotifications.includes(n.id)}
+                          onChange={() => n.id  && toggleSelection(n.id)}
                           onClick={e => e.stopPropagation()}
                           className="notification-checkbox"
                           aria-label={`בחר התראה: ${n.title}`}
@@ -207,7 +207,7 @@ const url=import.meta.env.VITE_API_URL
                         className="notification-delete"
                         onClick={e => {
                           e.stopPropagation();
-                          deleteNotification(n.id);
+                          n.id&&deleteNotification(n.id);
                         }}
                         title="מחק התראה"
                         aria-label={`מחק התראה: ${n.title}`}
